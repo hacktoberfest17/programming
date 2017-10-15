@@ -5,6 +5,5 @@ int main()
 {
    // printf() displays the string inside quotation
    printf("Hello, World!");
-   // The return 0 is the exit status of the program.
    return 0;
 }
