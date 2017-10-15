@@ -18,12 +18,13 @@ x(n) = x(n-1) + x(n-2)
 
 Developers Guide
 ---
+Following are the methods to generate fibonacci number.
 
+- Fibonacci at position n - *getFibonacciAt(n)* 
+- Fibonacci upto nth terms - *getFibonacci(n)*
+- Fibonacci upto n value - *getUptoFibonacci(n)*
 
 
 References:
 ---
 [Fibonacci number] (https://en.wikipedia.org/wiki/Fibonacci_number)
-
-
-
