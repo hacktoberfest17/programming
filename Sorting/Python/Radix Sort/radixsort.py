@@ -1,7 +1,7 @@
  def radixsort( aList ):
   RADIX = 10
   maxLength = False
-  tmp , placement = -1, 1
+  tmp, placement = -1, 1
  
   while not maxLength:
     maxLength = True
@@ -27,3 +27,6 @@
 def main():
   a = [18,5,100,3,1,19,6,0,7,4,2]
   radixsort(a)
+  
+if __name__ == "__main__":
+    main()
