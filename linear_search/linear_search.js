@@ -4,7 +4,7 @@
   * @param {any} ele - element to search for
   * @return {number} - index of the first occurrence of @ele if it exists, -1 otherwise
   */
-function bubbleSort(arr, ele) {
+function linearSearch(arr, ele) {
   if (arr === null || arr.length === 0) return -1;
 
   for (let i = 0; i < arr.length; i++) {
