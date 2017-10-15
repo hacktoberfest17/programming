@@ -25,7 +25,6 @@ void Merge(int a[], int l, int m, int r) {
     }
     while (i1 < n1) a[pos] = L[i1++], ++pos;
     while (i2 < n2) a[pos] = R[i2++], ++pos;
-
 }
 
 void MergeSort(int a[], int l, int r) {
@@ -42,10 +41,12 @@ void MergeSort(int a[], int l, int r) {
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
     cin >> n;
-    for(int i = 1; i <= n; ++i) cin >> a[i];
+    for(int i = 1; i <= n; ++i) 
+        cin >> a[i];
 
     MergeSort(a, 1, n);
 
-    for(int i = 1; i <= n; ++i) cout << a[i] << ' ';
+    for(int i = 1; i <= n; ++i) 
+        cout << a[i] << '\n';
     return 0;
 }
