@@ -4,4 +4,4 @@
 (define (list-map f lox)
   (cond [(empty? lox) empty]
         [else
-         (cons (f (first lox)) (map f (rest lox)))]))
+         (cons (f (first lox)) (list-map f (rest lox)))]))
