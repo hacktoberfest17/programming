@@ -1,4 +1,4 @@
-ddef partition(myList, start, end):
+def partition(myList, start, end):
     pivot = myList[start]
     left = start+1
     # Start outside the area to be partitioned
@@ -22,7 +22,6 @@ ddef partition(myList, start, end):
     myList[right]=temp
     return right
 
-
 def quicksort(myList, start, end):
     if start < end:
         # partition the list
@@ -31,8 +30,6 @@ def quicksort(myList, start, end):
         quicksort(myList, start, split-1)
         quicksort(myList, split+1, end)
     return myList
-
-
 
 def main():
     myList = [7,2,5,1,29,6,4,19,11]
