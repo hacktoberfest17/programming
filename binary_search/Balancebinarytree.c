@@ -1,6 +1,6 @@
 /*
- * Program to Construct a Balenced Binary Tree using Sorted Array
- *			An exemplar binary tree is
+ * Program to Construct a Balanced Binary Tree using Sorted Array
+ *			An example of binary tree:
  *                   40
  *                   /  \
  *                  20   60
