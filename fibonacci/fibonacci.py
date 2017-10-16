@@ -25,7 +25,6 @@ def fibonacci_series():
 	n = int(raw_input("Enter the number of terms: "))
 	print "Fibonacci Series: ",
 
-	#handling 1 and 2 terms explicitly
 	if n == 0:
 		print n1
 	elif n == 1:
