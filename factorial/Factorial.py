@@ -1,4 +1,9 @@
-'''THIS VERSION IS FOR PYTHON3'''
+"""
+
+Script to generate Factorial in python 2.7 and 3
+
+"""
+
 result = [i for i in range(1000)]
 
 def fact_dp(n):
@@ -16,9 +21,9 @@ if __name__ == '__main__':
     try:
         n = int(input("Enter a number :"))
     except ValueError:
-        print ("Not a number")
+        print("Not a number")
 
     if (n <= 0):
         print (1)
     else:
-        print ("Factorial : ", fact_dp(n))
+        print("Factorial : " + str(fact_dp(n)))
