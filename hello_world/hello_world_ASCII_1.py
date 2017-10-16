@@ -26,3 +26,5 @@ str = """
 """
 
 print(str)
+
+# generated from http://patorjk.com/software/taag/#
