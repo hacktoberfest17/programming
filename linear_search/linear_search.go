@@ -25,4 +25,3 @@ func main() {
 		fmt.Println("array[", index, "] = ", array[index])
 	}
 }
-
