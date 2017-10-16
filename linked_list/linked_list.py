@@ -1,6 +1,5 @@
 #! /usr/bin/env python3
 
-
 class Node:
     def __init__(self, data, next_node=None):
         self.data = data
@@ -70,5 +69,3 @@ if __name__ == "__main__":
     test_list.delete("I'm first!")
     test_list.traverse()
     print("List size after delete: {}".format(test_list.size()))
-
-
