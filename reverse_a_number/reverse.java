@@ -16,4 +16,4 @@ public class reverse
         System.out.print("reverse number:");
         System.out.println(a);
     }
-}   
+}
