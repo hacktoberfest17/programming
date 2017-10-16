@@ -106,5 +106,3 @@ const first = xs =>
   xs.reduce((acc, x) => acc)
 
 console.log(first([1,2,3]))
-
-
