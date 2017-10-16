@@ -1,6 +1,4 @@
-
 /* An implementation of Linear Search in Golang */
-
 
 package main
 
