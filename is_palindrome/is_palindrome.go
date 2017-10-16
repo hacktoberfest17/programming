@@ -11,9 +11,7 @@ func main() {
 	}else{
 		fmt.Println("Oops! there is a problem")
 	}
- 
-}
-
+ }
 
 func isPalindrome(s string) bool {
 	mid := len(s) / 2
