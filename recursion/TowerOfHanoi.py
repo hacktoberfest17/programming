@@ -1,10 +1,10 @@
-def TowerOfHanoi(top, start, via, end):
-	if top == 1:
-		print(start + ' --> ' + end)
+def TowerOfHanoi(n, from_rod, to_rod, aux_rod):
+	if n == 1:
+		print(from_rod + ' --> ' + to_rod)
 	else:
-		TowerOfHanoi(top - 1, start, end, via)
+		TowerOfHanoi(top - 1, from_rod, aux_rod, to_rod)
 		print(start + ' --> ' + end)
-		TowerOfHanoi(top - 1, via, start, end)
+		TowerOfHanoi(top - 1, aux_rod, to_rod, from_rod)
 
 def main():
 	blocks = 5
