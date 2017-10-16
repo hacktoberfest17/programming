@@ -14,7 +14,7 @@ A month-long celebration from October 1st - 31st sponsored by [Digital Ocean](ht
 
 
 ## Check your hacktoberfest contributions at: 
- [hacktoberfest.digitalocean.com/stats](https://hacktoberfest.digitalocean.com/stats/t2013anurag)
+ [https://hacktoberfest.digitalocean.com/stats](https://hacktoberfest.digitalocean.com/stats/t2013anurag)
 
 
 
@@ -36,20 +36,26 @@ To do so, first create a issue with the task you are doing, for example: "Issue 
 ## Getting Started
 * Fork this repository (Click the Fork button in the top right of this page, click your Profile Image)
 * Clone your fork down to your local machine
-```markdown
-git clone https://github.com/your-username/programming.git
-```
+
+  ```sh
+  $ git clone https://github.com/your-username/programming.git
+  ```
+
 * Create a branch
-```markdown
-git checkout -b branch-name
-```
+
+  ```sh
+  $ git checkout -b branch-name
+  ```
+
 * Make your changes (Choose from any task below)
 * Commit and Push
-```markdown
-git add .
-git commit -m 'commit message'
-git push origin branch-name
-```
+
+  ```sh
+  $ git add filename 
+  $ git commit -m 'commit message'
+  $ git push origin branch-name
+  ```
+
 * Create a New Pull Request from your forked repository (Click the New Pull Request button located at the top of your repo)
 * Wait for your PR review and merge approval!
 * __Star this repository__ if you had fun!
@@ -74,3 +80,7 @@ Don't forget to include the comments as seen above. Feel free to include additio
 ## Additional References Added By Contributors
 
 * [GitHub license explained](https://choosealicense.com)
+
+## Licensing
+
+This repo is licensed under GNU General Public License v3.0. See [LICENSE](https://github.com/hacktoberfest17/programming/blob/master/LICENSE) for the full license text.
