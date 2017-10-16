@@ -43,3 +43,10 @@ L = [1, 2, 4, 6, 9]
 
 ```
  
+### Program format:
+
+#### Input:
+Enter the elements of array with space as delimeter: 4 6 7 8 2
+
+#### Output:
+Sorted list: [2, 4, 6, 7, 8]
