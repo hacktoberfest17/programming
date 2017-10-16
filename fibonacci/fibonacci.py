@@ -1,4 +1,3 @@
-#!/usr/bin/python
 """
 
 Script to generate fibonacci series in python_2.7 and python_3
