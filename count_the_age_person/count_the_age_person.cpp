@@ -22,7 +22,7 @@ int main()
 	cin>>CurrentYear;
 	
 	AgeYear=CurrentYear-BirthYear;
-	AgeMonth=12-BirthMonth;
+	AgeMonth=CurrentMonth-BirthMonth;
 	
 	cout<<"\n\n\t\tYour Age is "<<AgeYear<<" Years And "<<AgeMonth<<" Months ";
 	

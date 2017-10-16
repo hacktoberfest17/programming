@@ -13,6 +13,11 @@ A month-long celebration from October 1st - 31st sponsored by [Digital Ocean](ht
 [https://hacktoberfest.digitalocean.com/](https://hacktoberfest.digitalocean.com/)
 
 
+## Check your hacktoberfest contributions at: 
+ [hacktoberfest.digitalocean.com/stats](https://hacktoberfest.digitalocean.com/stats/t2013anurag)
+
+
+
 ## How To Contribute to This Project
 Here are 3 quick and painless steps to contribute to this project:
 
@@ -24,6 +29,7 @@ To do so, first create a issue with the task you are doing, for example: "Issue 
 	Also create a directory for any new program if it doesn't exist.
 	eg. `hello_world`, `bubble_sort`.
 	Inside these directories you can create your own file named `program_name.language_extension` (`hello_world.cpp`)
+	Create a commit of the form - fixes #(issue_number)
 
 * Finally, wait for it to be merged!
 
