@@ -1,13 +1,27 @@
 #include <iostream>
+
 using namespace std;
 
-bool is_prime(int n) {
-	if (n == 2 || n == 3)
-		return true;
-	if (n % 2 == 0 || n % 3 == 0)
-		return false;
-	for (int i = 1; 36*i*i-12*i < n ; i++)
-		if ((n % (6*i+1) == 0) || (n % (6*i-1) == 0)) 
-			return false;
-	return true;
+int main()
+{
+  int n, i;
+  bool isPrime = true;
+
+  cout << "Enter a positive integer: ";
+  cin >> n;
+
+  for(i = 2; i <= n / 2; ++i)
+  {
+      if(n % i == 0)
+      {
+          isPrime = false;
+          break;
+      }
+  }
+  if (isPrime)
+      cout << "This is a prime number";
+  else
+      cout << "This is not a prime number";
+
+  return 0;
 }
