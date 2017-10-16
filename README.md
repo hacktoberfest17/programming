@@ -37,24 +37,24 @@ To do so, first create a issue with the task you are doing, for example: "Issue 
 * Fork this repository (Click the Fork button in the top right of this page, click your Profile Image)
 * Clone your fork down to your local machine
 
-```sh
-$ git clone https://github.com/your-username/programming.git
-```
+  ```sh
+  $ git clone https://github.com/your-username/programming.git
+  ```
 
 * Create a branch
 
-```sh
-$ git checkout -b branch-name
-```
+  ```sh
+  $ git checkout -b branch-name
+  ```
 
 * Make your changes (Choose from any task below)
 * Commit and Push
 
-```sh
-$ git add .
-$ git commit -m 'commit message'
-$ git push origin branch-name
-```
+  ```sh
+  $ git add .
+  $ git commit -m 'commit message'
+  $ git push origin branch-name
+  ```
 
 * Create a New Pull Request from your forked repository (Click the New Pull Request button located at the top of your repo)
 * Wait for your PR review and merge approval!
