@@ -1,3 +1,5 @@
+#!/bin/python3
+
 import socket, sys
 
 class tcp_client:

@@ -1,7 +1,5 @@
 #!/bin/python3
 
-# A simple TCP Server
-
 import socketserver
 
 class tcp_handler(socketserver.BaseRequestHandler):
