@@ -1,6 +1,6 @@
 const fibs = new Map();
-fibs.set(1, 1);
-fibs.set(2,1);
+fibs.set(0, 1);
+fibs.set(1,1);
 
 /**
  * Get fibonacci number at a particular place.
