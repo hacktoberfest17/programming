@@ -1,6 +1,7 @@
 using namespace std;
 
 #include <iostream>
+#include <math>
 
 int main()
 {
@@ -22,7 +23,12 @@ int main()
 	cin>>CurrentYear;
 	
 	AgeYear=CurrentYear-BirthYear;
-	AgeMonth=CurrentMonth-BirthMonth;
+	AgeMonth=CurrentMonth-BirthMonth;//Since Current month might be less than the BirthMonth
+	if AgeMonth < 0
+	  AgeYear--;
+	end
+	
+	AgeMonth = abs(AgeMonth)
 	
 	cout<<"\n\n\t\tYour Age is "<<AgeYear<<" Years And "<<AgeMonth<<" Months ";
 	
