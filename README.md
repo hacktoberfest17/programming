@@ -14,7 +14,7 @@ A month-long celebration from October 1st - 31st sponsored by [Digital Ocean](ht
 
 
 ## Check your hacktoberfest contributions at: 
- [hacktoberfest.digitalocean.com/stats](https://hacktoberfest.digitalocean.com/stats/t2013anurag)
+ [https://hacktoberfest.digitalocean.com/stats](https://hacktoberfest.digitalocean.com/stats/t2013anurag)
 
 
 
