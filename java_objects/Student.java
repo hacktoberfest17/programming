@@ -32,5 +32,6 @@ public class Student{
     s1.setName("John");
     System.out.println("Id: " + s1.rollno + " Name: "+ s1.name+" gender: " + s1.gender+" gpa: "+ s1.gpa);
     System.out.println("Id: " + s2.rollno + " Name: "+ s2.name+" gender: " + s2.gender+" gpa: "+ s2.gpa);
+    System.out.println(s1 instanceof Student);// displays true or false
   }
 }
