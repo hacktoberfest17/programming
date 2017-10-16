@@ -1,7 +1,7 @@
 /*	Created by Duncan Bristow, based on factorial.js
-	To compile: 'rustc factorial.rs' and run factorial.exe
-	
+	To compile: 'rustc factorial.rs' and run factorial.exe	
 */
+
 use std::io;
 use std::io::Write;
 use std::process::exit;
