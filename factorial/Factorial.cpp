@@ -18,7 +18,7 @@ int main()
 	int n;
 	cout<<"Enter a number :";
 	cin>>n;
-	if(n==0)
+	if(n<=0)
 		cout<<1<<endl;
 	else
 		cout<<"Factorial :"<<fact_dp(n)<<endl;
