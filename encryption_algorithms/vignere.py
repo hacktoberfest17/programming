@@ -82,13 +82,15 @@ def decrypt(key, mess):
 		j = (j+1)%(len(key))
 	return res
 
+# Instructions to use : Can be used both, interactively as well as via command line arguments
+# Via command line parameters:
+# 		Use for encryption : python vignere.py -e lemon attack at dawn
+# 		Use for decryption : python vignere.py -d lemon lxgopv eg rnir
+#  Interactively just follow the prompts
+
 if(flag == 1):
 	for i in range(0,len(message)):
 		print encrypt(keyword, message[i]),
 elif(flag ==2):
 	for i in range(0,len(message)):
 		print decrypt(keyword, message[i]),
-
-
-
-
