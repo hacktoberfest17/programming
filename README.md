@@ -51,7 +51,7 @@ To do so, first create a issue with the task you are doing, for example: "Issue 
 * Commit and Push
 
   ```sh
-  $ git add .
+  $ git add filename 
   $ git commit -m 'commit message'
   $ git push origin branch-name
   ```
