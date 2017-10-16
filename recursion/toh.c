@@ -1,15 +1,15 @@
 #include <stdio.h>
  
-void towerOfHanoi(int top, char start, char via, char end)
+void towerOfHanoi(int n, char from_rod, char to_rod, char aux_rod)
 {
-    if (top == 1)
+    if (n == 1)
     {
-        printf("Move disk 1 from rod %c to rod %c\n", start, end);
+        printf("Move disk 1 from rod %c to rod %c\n", from_rod, to_rod);
         return;
     }
-    towerOfHanoi(top-1, start, end, via);
-    printf("Move disk %d from rod %c to rod %c\n",top, start, end);
-    towerOfHanoi(top-1, via, start, end);
+    towerOfHanoi(n-1, from_rod, aux_rod, to_rod);
+    printf("Move disk %d from rod %c to rod %c\n", n, from_rod, to_rod);
+    towerOfHanoi(n-1, aux_rod, to_rod, from_rod);
 }
  
 int main()
