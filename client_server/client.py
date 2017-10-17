@@ -27,5 +27,4 @@ class tcp_client:
 if __name__ == "__main__":
     # A simple example of using the client
     client = tcp_client("localhost", 9998)
-    client.ping()
-
+client.ping()

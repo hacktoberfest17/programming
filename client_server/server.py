@@ -36,4 +36,4 @@ class tcp_server:
 if __name__ == "__main__":
     # Basic Example
     server = tcp_server("localhost", 9998)
-    server.start()
+server.start()
