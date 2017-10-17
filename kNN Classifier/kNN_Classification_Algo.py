@@ -13,10 +13,10 @@ def majority_select(votes):
     """ Returns the most frequent class,i.e. who has maximum occurence"""
     vote_counts={}
     for vote in votes:
-        #for known words
+        #for known ones
         if vote in vote_counts:
             vote_counts[vote]+=1
-        #for unknown words
+        #for unknown ones
         else:
             vote_counts[vote] = 1
             
