@@ -1,0 +1,23 @@
+<html>
+	<body>
+		
+
+
+<p>Add birthdate</p>
+<form id='birthdate_form' method='post' action='/app/add_birthdate/'>
+	{% csrf_token %}
+	{% for hidden in form.hidden_fields %}
+		{{ hidden }}
+	{% endfor %}
+
+	{% for field in form.visible_fields %}
+		{{ field.errors }}
+		{{ field.help_text }}
+		{{ field }}
+	{% endfor %}
+	<br>
+	<input type='submit' name='submit' value='Done' />
+</form>
+
+	</body>
+</html>
