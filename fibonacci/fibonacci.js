@@ -1,26 +1,10 @@
-const fibs = new Map();
-fibs.set(0, 1);
-fibs.set(1,1);
+var n;
+var f = [];
 
-/**
- * Get fibonacci number at a particular place.
- *
- * @param {number} place
- * @return {number}
- */
-function fib(place) {
-  if (fibs.has(place)) {
-    return fibs.get(place);
-  }
-  const f = fib(place  - 2) + fib(place - 1);
-  fibs.set(place, f);
-  return f;
+f[0] = 0;
+f[1] = 1;
+for(i=2; i<=10; i++)
+{
+    f[i] = f[i-2] + f[i-1];
+    console.log(f[i]);
 }
-
-function main() {
-  for(let i = 1; i < Math.random() * 1000; i++) {
-    console.log(fib(i));
-  }
-}
-
-main();
