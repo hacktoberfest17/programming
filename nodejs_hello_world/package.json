@@ -1,0 +1,16 @@
+{
+  "name": "nodejs_hello_world",
+  "version": "1.0.0",
+  "description": "simple \"Hello World!\" with nodejs and express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "js"
+  ],
+  "author": "blitze299",
+  "license": "ISC"
+}
