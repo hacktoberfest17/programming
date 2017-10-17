@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wellington.pokeapisample.view.ui.DetailsActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?android:attr/actionBarSize"
+            android:background="@drawable/background3"
+            android:orientation="vertical">
+
+            <GridLayout
+                android:id="@+id/grid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="Name: "
+                    android:textStyle="bold"
+                    android:textSize="35dp"/>
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_column="1"
+                    android:layout_row="0"
+                    tools:text="Name"
+                    android:textStyle="bold"
+                    android:textSize="35dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:text="Height: "
+                    android:textStyle="bold"
+                    android:textSize="35dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    />
+
+                <TextView
+                    android:id="@+id/height"
+                    android:layout_column="1"
+                    android:layout_row="1"
+                    tools:text="Height"
+                    android:textStyle="bold"
+                    android:textSize="35dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    />
+
+                <ImageView
+                    android:id="@+id/ivSprite"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:scaleType="fitCenter"
+                    tools:src="@drawable/egg" />
+            </GridLayout>
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/sliding_tabs"
+                style="@style/TabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                app:tabGravity="fill" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/pokefloating" />
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/fabSpecies"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@android:color/black"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/buttonDown"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/arrowdown" />
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_column="0"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="30dp"
+                android:layout_row="0"
+                android:text="Species: "
+                android:textColor="#FFFF" />
+
+            <TextView
+                android:id="@+id/species"
+                android:layout_column="1"
+                android:layout_marginTop="30dp"
+                android:layout_row="0"
+                android:textColor="#FFFF"
+                tools:text="Species" />
+
+        </GridLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/loading" />
+
+</FrameLayout>
