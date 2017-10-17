@@ -22,7 +22,7 @@ A month-long celebration from October 1st - 31st sponsored by [Digital Ocean](ht
 Here are 3 quick and painless steps to contribute to this project:
 
 * Add a program in any language. (A simple Hello World would suffice.)
-To do so, first create a issue with the task you are doing, for example: "Issue - creating bubble sort in C". Add the `HacktoberFest` label in the issue and assign the issue to yourself. Create a pull request in response to that issue and finally submit it for review.
+To do so, first create a issue with the task you are doing, for example: "Issue - creating bubble sort in C". Add the `HacktoberFest` label in the issue and assign the issue to yourself. Create a pull request in response to that iss.ue and finally submit it for review.
 
 * Name your branch `username_hello_world_in_c`.
 
@@ -62,7 +62,7 @@ To do so, first create a issue with the task you are doing, for example: "Issue 
 
 
 
-Don't forget to include the comments as seen above. Feel free to include additional information about the lanuage you chose in your comments too! Like a link to a helpful introduction or tutorial.
+Don't forget to include the comments as seen above. Feel free to include additional information about the language you chose in your comments too! Like a link to a helpful introduction or tutorial.
 
 ## Reference Links
 * [Tutorial: Creating your first pull request](https://github.com/Roshanjossey/first-contributions)
