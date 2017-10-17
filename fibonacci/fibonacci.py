@@ -1,7 +1,9 @@
-#!/usr/bin/python
 """
-Script to generate fibonacci series in python_2.7
+
+Script to generate fibonacci series in python_2.7 and python_3
+
 """
+
 
 def fibonacci_series():
 	"""
@@ -20,22 +22,26 @@ def fibonacci_series():
 	#first and second terms
 	n1 = 0
 	n2 = 1
+	numbers = list()
 
 	#getting number of terms
-	n = int(raw_input("Enter the number of terms: "))
-	print "Fibonacci Series: ",
+	n = int(input("Enter the number of terms: "))
+	
 
 	if n == 0:
-		print n1
+		numbers.append(n1)
 	elif n == 1:
-		print n1,", ",n2
+		numbers.append(n1)
+		numbers.append(n2)
 	else:
-		print n1,", ",n2,", ",
+		numbers.append(n1)
+		numbers.append(n2)
 		for i in range(1,n):
-			print n2+n1,", ",
+			numbers.append(n2+n1)
 			n3 = n2+n1
 			n1 = n2
 			n2 = n3
+	print("Fibonacci Series: " + str(numbers))
 
 if __name__ == "__main__":
 	fibonacci_series()
