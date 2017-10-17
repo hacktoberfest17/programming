@@ -9,17 +9,17 @@ class Fibonacci {
   }
 
   private static void printFibonacciSeries(long num) {
-    long a = 1, b = 1;
-    StringBuilder sb = new StringBuilder();
+    long fibnminus1 = 1, fibnminus2 = 1;
+    StringBuilder stringbuilder = new StringBuilder();
     while (num-- > 0) {
-      sb.append(a);
+      stringbuilder.append(fibnminus1);
       if (num > 0) {
-        sb.append(", ");
+        stringbuilder.append(", ");
       }
-      long tmp = a;
-      a = b;
-      b = b + tmp;
+      long fibntmp = fibnminus1;
+      fibnminus1 = fibnminus2;
+      fibnminus2 = fibnminus2 + fibntmp;
     }
-    System.out.println(sb);
+    System.out.println(stringbuilder);
   }
 }
