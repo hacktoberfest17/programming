@@ -25,5 +25,3 @@ int main()
     printf("GCD of %d and %d is %d ", a, b, gcd(a, b));
     return 0;
 }
-
-
