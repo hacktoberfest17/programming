@@ -12,26 +12,17 @@ public class PasswordStrength {
     char x = password.charAt(i);
     if (Character.isLetter(x)) {
      if (Character.isUpperCase(x)) {
-
       hasUpperCase = true;
-
      } else if (Character.isLowerCase(x)) {
-
       hasLowerCase = true;
      }
-
      hasLetter = true;
     } else if (Character.isDigit(x)) {
-
      hasDigit = true;
     }
-
-    // no need to check further, break the loop
-    if (hasLetter && hasDigit && hasUpperCase && hasLowerCase) {
-
+   if (hasLetter && hasDigit && hasUpperCase && hasLowerCase) {
      break;
     }
-
    }
    if (hasLetter && hasDigit && hasUpperCase && hasLowerCase) {
     System.out.println("STRONG");
