@@ -1,9 +1,7 @@
 from __future__ import print_function
 
-
 def print_reverse_num(num):
     print(num[::-1])
-
 
 if __name__ == "__main__":
     number_input = input("Please input any number (integer): ")
