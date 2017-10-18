@@ -6,6 +6,3 @@ Given a sequence consisting of parentheses, determine whether the expression is 
 `([{}])` - this is balanced parenthesis
 
 `([{]})` - this is not balanced parenthesis
-
-### Output
-Returns `yes` if balanced and `no` if not.
