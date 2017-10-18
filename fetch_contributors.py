@@ -26,7 +26,7 @@ with urllib.request.urlopen("https://api.github.com/repos/hacktoberfest17/" +
                     CONTRIBUTORS.append((contributor['login'], contributor['html_url']))
 
 #write to the file contributors.md
-FILE = open(os.path.join(os.path.dirname(__file__), 'contributors.md'), "w")
+FILE = open(os.path.join(os.path.dirname(__file__), 'CONTRIBUTORS.md'), "w")
 FILE.write("""## Check your hacktoberfest contributions at:
  [hacktoberfest.digitalocean.com/stats](https://hacktoberfest.digitalocean.com/stats/t2013anurag)
 
@@ -40,5 +40,5 @@ Programming contributors (sorted contributions)
 
 for contributor in CONTRIBUTORS:
     FILE.write("* **[" + str(contributor[0]) +"]("+str(contributor[1])+")**\n\n\n")
+
 FILE.close()
-    
