@@ -12,5 +12,8 @@ func factorial(number int) int {
 }
 
 func main() {
-	fmt.Println(factorial(5))
+	var n int
+	fmt.Print("Enter a number: ")
+	fmt.Scanf("%d", &n)
+	fmt.Printf("(%d)! = %d\n", n, factorial(n))
 }
