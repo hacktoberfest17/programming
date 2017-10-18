@@ -17,6 +17,10 @@ function checkean(code)
 	}
 	checkdigit = 10 - (sum%10);
 
+	if (checkdigit == 10) {
+		checkdigit = 0;
+	}
+
 	if (checkdigit == act_checkdigit) {
 		return true;
 	}
