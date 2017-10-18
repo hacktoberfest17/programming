@@ -1,8 +1,8 @@
-#include<stdio.h>
+#include<iostream.h>
 int main()
 {
 	int n;
-	while(scanf("%d",&n), n!=42)
-		printf("%d\n",n);
+	while(cin>>n, n!=42)
+		cout<<n<<"\n";
 	return 0;
 } 
