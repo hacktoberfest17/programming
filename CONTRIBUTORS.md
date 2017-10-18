@@ -10,6 +10,21 @@ Programming contributors (sorted contributions)
 * **[t2013anurag](https://github.com/t2013anurag)**
 
 
+* **[harryi3t](https://github.com/harryi3t)**
+
+
+* **[harsh4723](https://github.com/harsh4723)**
+
+
+* **[harshtheworkman](https://github.com/harshtheworkman)**
+
+
+* **[hasa93](https://github.com/hasa93)**
+
+
+* **[JenGoodridge](https://github.com/JenGoodridge)**
+
+
 * **[lap00zza](https://github.com/lap00zza)**
 
 
@@ -110,9 +125,6 @@ Programming contributors (sorted contributions)
 
 
 * **[shubham0109](https://github.com/shubham0109)**
-
-
-* **[ThomasChr](https://github.com/ThomasChr)**
 
 
 * **[tiagorlampert](https://github.com/tiagorlampert)**
@@ -253,6 +265,9 @@ Programming contributors (sorted contributions)
 * **[dorzel](https://github.com/dorzel)**
 
 
+* **[MadKat13](https://github.com/MadKat13)**
+
+
 * **[42mandychen](https://github.com/42mandychen)**
 
 
@@ -277,7 +292,13 @@ Programming contributors (sorted contributions)
 * **[adsrc](https://github.com/adsrc)**
 
 
+* **[1Conan](https://github.com/1Conan)**
+
+
 * **[abizerlokhandwala](https://github.com/abizerlokhandwala)**
+
+
+* **[kaywinnet](https://github.com/kaywinnet)**
 
 
 * **[anmolsrivastava05](https://github.com/anmolsrivastava05)**
@@ -331,10 +352,10 @@ Programming contributors (sorted contributions)
 * **[Ocete](https://github.com/Ocete)**
 
 
+* **[Mrigank11](https://github.com/Mrigank11)**
+
+
 * **[UthpalaPitawela](https://github.com/UthpalaPitawela)**
-
-
-* **[1Conan](https://github.com/1Conan)**
 
 
 * **[aadityakhare](https://github.com/aadityakhare)**
@@ -382,19 +403,16 @@ Programming contributors (sorted contributions)
 * **[lwagf](https://github.com/lwagf)**
 
 
-* **[MadKat13](https://github.com/MadKat13)**
-
-
 * **[lfuelling](https://github.com/lfuelling)**
-
-
-* **[Mrigank11](https://github.com/Mrigank11)**
 
 
 * **[rasikraj01](https://github.com/rasikraj01)**
 
 
 * **[samfrey99](https://github.com/samfrey99)**
+
+
+* **[ThomasChr](https://github.com/ThomasChr)**
 
 
 * **[Timonmr](https://github.com/Timonmr)**
@@ -425,6 +443,9 @@ Programming contributors (sorted contributions)
 
 
 * **[rsm23](https://github.com/rsm23)**
+
+
+* **[trinity97](https://github.com/trinity97)**
 
 
 * **[d3vil0p3r](https://github.com/d3vil0p3r)**
@@ -484,21 +505,12 @@ Programming contributors (sorted contributions)
 * **[Gayathrir1666](https://github.com/Gayathrir1666)**
 
 
+* **[gtrimarchi](https://github.com/gtrimarchi)**
+
+
 * **[JohnsonGlenT](https://github.com/JohnsonGlenT)**
 
 
 * **[hansiang93](https://github.com/hansiang93)**
-
-
-* **[harsh4723](https://github.com/harsh4723)**
-
-
-* **[harshtheworkman](https://github.com/harshtheworkman)**
-
-
-* **[hasa93](https://github.com/hasa93)**
-
-
-* **[JenGoodridge](https://github.com/JenGoodridge)**
 
 
