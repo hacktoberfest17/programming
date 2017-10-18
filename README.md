@@ -47,7 +47,7 @@ To do so, first create a issue with the task you are doing, for example: "Issue 
   $ git checkout -b branch-name
   ```
 
-* Make your changes (Choose from any task below)
+* Make your changes
 * Commit and Push
 
   ```sh
