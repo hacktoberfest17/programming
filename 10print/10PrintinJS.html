@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body style="margin: 5%;">
+    <div style="word-wrap: break-word; line-height: 1em;" id="content">
+        
+    </div>
+    
+    <script type="text/javascript" >	
+		    var boxes = ["\u2571", "\u2572"];
+        var max = 4000;
+        function writeNext()
+        {
+            document.getElementById('content').innerHTML +=
+            boxes[Math.round(Math.random())];
+        }
+        var count = 0;
+        function run() {
+            writeNext();
+            if(count++ < max) {
+                setTimeout(run,9);
+            }
+        }
+        run();        
+    </script>
+</body>
+</html>
