@@ -26,8 +26,7 @@ class twinprimes{
 			if(obj.isPrime(i) == true && obj.isPrime(i+2)==true)
 			{
 				System.out.print(" ("+i+","+(i+2)+") ");
-			}
-			
+			}		
 		}
 	}
 }
