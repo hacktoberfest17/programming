@@ -10,6 +10,12 @@ Programming contributors (sorted contributions)
 * **[t2013anurag](https://github.com/t2013anurag)**
 
 
+* **[JohnsonGlenT](https://github.com/JohnsonGlenT)**
+
+
+* **[hansiang93](https://github.com/hansiang93)**
+
+
 * **[harryi3t](https://github.com/harryi3t)**
 
 
@@ -109,6 +115,9 @@ Programming contributors (sorted contributions)
 * **[rm-1612](https://github.com/rm-1612)**
 
 
+* **[Mego](https://github.com/Mego)**
+
+
 * **[sairamreddy3048](https://github.com/sairamreddy3048)**
 
 
@@ -146,6 +155,12 @@ Programming contributors (sorted contributions)
 
 
 * **[stupidly-logical](https://github.com/stupidly-logical)**
+
+
+* **[amanharitsh123](https://github.com/amanharitsh123)**
+
+
+* **[ccsplit](https://github.com/ccsplit)**
 
 
 * **[cohnt](https://github.com/cohnt)**
@@ -379,6 +394,9 @@ Programming contributors (sorted contributions)
 * **[varbrad](https://github.com/varbrad)**
 
 
+* **[bacecek](https://github.com/bacecek)**
+
+
 * **[Candunc](https://github.com/Candunc)**
 
 
@@ -451,6 +469,9 @@ Programming contributors (sorted contributions)
 * **[d3vil0p3r](https://github.com/d3vil0p3r)**
 
 
+* **[AlexPietz](https://github.com/AlexPietz)**
+
+
 * **[lxndio](https://github.com/lxndio)**
 
 
@@ -506,11 +527,5 @@ Programming contributors (sorted contributions)
 
 
 * **[gtrimarchi](https://github.com/gtrimarchi)**
-
-
-* **[JohnsonGlenT](https://github.com/JohnsonGlenT)**
-
-
-* **[hansiang93](https://github.com/hansiang93)**
 
 
