@@ -1,0 +1,11 @@
+f1=open("encrypted_file.txt","r")
+s=f1.read()
+f1.close()
+s=list(s)
+for i in range(len(s)):
+	s[i]=chr(ord(s[i])-len(s)+i)
+s.reverse()
+s="".join(s)
+f2=open("decrypted_file.txt","w+")
+f2.write(s)
+f2.close()
