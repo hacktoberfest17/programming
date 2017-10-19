@@ -41,7 +41,7 @@ Finally, wait for it to be merged!
   $ git checkout -b branch-name
   ```
 
-* Make your changes (Choose from any task below)
+* Make your changes
 * Commit and Push
 
   ```sh
