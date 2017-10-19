@@ -1,0 +1,11 @@
+f1=open("file_before_enc.txt","r")
+s=f1.read()
+f1.close()
+s=list(s)
+s.reverse()
+for i in range(len(s)):
+	s[i]=chr(ord(s[i])+len(s)-i)
+s="".join(s)
+f2=open("encrypted_file.txt","w+")
+f2.write(s)
+f2.close()
