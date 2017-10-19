@@ -4,7 +4,7 @@
 
 
 # Array for saving calculated ones 
-fib_mem = [0 for i in range(100000)]
+fib_mem = [0]*100000
 fib_mem[0] = 0
 fib_mem[1] = 1
 
@@ -29,10 +29,13 @@ def main():
   
     # Take input 
     n = int(input("Enter the number of terms: \n"))
+
+    # setting the values of array
+    temp = fibonacci(n)
     
     # loop an print the series
     for i in range(n):
-        print(fibonacci(i))
+        print(fib_mem[i])
 
 # Run the script
 main()
