@@ -4,9 +4,9 @@ public class babylonian_square_root
 {
 	public static double squareRoot(double num)
 	{
-		x = num;
-		y = 1;
-		e = 0.00000001;
+		double x = num;
+		double y = 1;
+		double e = 0.00000001;
 
 		while (x - y > e)
 		{
