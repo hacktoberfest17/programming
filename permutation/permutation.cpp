@@ -12,7 +12,11 @@ long long npr(long n, long r) {
 }
 
 int main() {
-
-	cout << npr(15, 5);
-	return 0;
+	
+	int permutation = npr(15, 5);
+	if (permutation > 0)
+		cout << permutation;
+	else
+		cout << "Invalid Input";
+	return 0;		
 }
