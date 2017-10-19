@@ -1,4 +1,4 @@
-//brackets.js
+
 
 const isBalanced = function(str){
 	const stack = new Array(); //can be used as LIFO stack
