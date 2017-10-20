@@ -40,3 +40,20 @@ bool alpha_comp(char *s1,char *s2)
 {
     return (strcmp(s1,s2)<0)?true:false;
 }
+
+
+// Input:
+//sorts these string values
+// string names1[] = {"George","Penny","Estelle","Don","Mike","Bob"};
+//converts these inches to centimetres
+// double inches[] = {3.5,6.4,6,7,8};
+
+// Output:
+// 8.89 16.256 15.24 17.78 20.32 5.34025e-317 22.5806
+// Don is element 3 on the list
+// Bob
+// Don
+// Estelle
+// George
+// Mike
+// Penny
