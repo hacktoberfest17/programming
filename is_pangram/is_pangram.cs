@@ -11,7 +11,7 @@ public class is_pangram
 			if (str[i] >= 'A' && str[i] <= 'Z')
 				pangram[str[i] - 'A'] = true;
 			if (str[i] >= 'a' && str[i] <= 'z')
-				pangram[str[i] = 'a'] = true;
+				pangram[str[i] - 'a'] = true;
 		}
 
 		for (int i = 0; i < 26; i++)
