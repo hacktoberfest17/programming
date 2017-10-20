@@ -3,10 +3,6 @@ using namespace std;
 
 int main()
  {
-	int t;
-        cin>>t;
-        while(t--)
-        {
           unsigned int n;
           cin>>n;
           unsigned int rev = 0;
@@ -20,6 +16,5 @@ int main()
               }
           }
           cout<<rev<<endl;
-        }
 	return 0;
 }
