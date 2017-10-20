@@ -3,10 +3,7 @@
 #include<string.h>
 #include<functional>
 #include<algorithm>
-
-
 using namespace std;
-
 char *names[] = {"George","Penny","Estelle","Don","Mike","Bob"};
 bool alpha_comp(char *,char*);
 string names1[] = {"George","Penny","Estelle","Don","Mike","Bob"};
@@ -17,11 +14,7 @@ bool isDon(string name)
 double in_to_cm(double s)
 {
     return (s * 2.54);
-
 }
-
-
-
 int main()
 {
     double centi[7];
@@ -37,21 +30,13 @@ int main()
     else
     {
         cout << "Don is element " << (ptr-names1) << " on the list\n";
-
     }
-
-
     sort(names,names+6,alpha_comp);
-
     for(int i=0;i<6;i++)
         cout << names[i] << endl;
     return 0;
-
-
 }
 bool alpha_comp(char *s1,char *s2)
 {
     return (strcmp(s1,s2)<0)?true:false;
 }
-
-
