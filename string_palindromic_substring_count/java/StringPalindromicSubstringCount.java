@@ -6,7 +6,8 @@ public class StringPalindromicSubstringCount {
 		// TODO Auto-generated method stub
 		Scanner scn = new Scanner(System.in);
 		System.out.println("Enter String");
-		System.out.println(scn.next());
+		String str = scn.next();
+		System.out.println(countPalindromes(str));
 	}
 
 	public static int countPalindromes(String str){
