@@ -4,6 +4,3 @@ function factorial (n) {
 }
 
 console.log(factorial(10)) // 3,628,800
-
-
-
