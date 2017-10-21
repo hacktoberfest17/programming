@@ -11,7 +11,7 @@ int main()
 	int intinput;
 	for (int i = 0; i < strinput.length(); i++){
 		if (isalpha(strinput[i])){
-			intinput = strinput[i];
+			intinput = tolower(strinput[i]);
 			intinput = intinput - 96;
 			cout << intinput;
 		}
