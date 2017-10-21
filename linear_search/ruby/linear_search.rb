@@ -1,18 +1,14 @@
-puts "Enter array elements seperated by space"
-arr = gets.split(" ")
-
-puts "Enter the element to be searched"
-element_to_search = gets.chomp()
-
-idx = -1;
-arr.each_with_index do|arr_element, index|
-  if(arr_element == element_to_search)
-    idx = index
-    break
-  end
+def linear_search(array, key)
+  i = 0
+  while i < array.length
+      if array[i] == key
+        return "#{key} at index #{array.index(key)}"
+      end
+      i+=1
+    end
+    return -1
 end
 
-puts "Element found at index #{idx}"
-
-
-
+array = [1,6,7,3,4]
+key = 3
+puts linear_search(array, key)

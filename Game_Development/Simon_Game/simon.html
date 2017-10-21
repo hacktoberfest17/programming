@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simon Game</title>
+	<meta charset="utf-8" lang="en">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="simon.css">
+	<script type="text/javascript" src="simon.js"></script>
+</head>
+<body>
+	<h1 class="text-center"> Simon Game </h1>
+
+	<div class="container">
+
+		<span id="green" class="colorDisplay">
+			<audio id="G" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" ></audio>	
+		</span>
+
+		<span id="red" class="colorDisplay">
+			<audio id="R" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" ></audio>	
+		</span>
+
+		<div id="result" class="hide">
+			<br><br><br>
+			<h1 class="text-center"> You Won </h1>
+		</div>
+
+		<div id="simon">
+			<h2 class="text-center"><b> Simon </b></h2>
+			<div id="switch">
+				<input type="checkbox" id="on-off" data-toggle="toggle" data-style="ios" data-onstyle="danger">
+			</div>
+
+			<audio id="wrong" src="Wrong-answer-sound-effect.mp3"></audio>
+
+			<div id="buttons">
+				<input id="count" value="" disabled="true">
+				<button id="start" class="box-shadow">Start</button>
+				<button id="reset" class="hide">Reset</button>
+				<button id="strict" class="box-shadow">Strict</button>
+			</div>
+		</div>
+
+		<span id="yellow" class="colorDisplay">
+			<audio id="Y" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" ></audio>
+		</span>
+
+		<span id="blue" class="colorDisplay">
+			<audio id="B" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" ></audio>
+		</span>
+
+	</div>
+
+	<footer>
+		<h3>Coded by<a href="https://github.com/iambk" target="_blank"> Bharath Kumar</a>.</h3>
+	</footer>
+</body>
+</html>
