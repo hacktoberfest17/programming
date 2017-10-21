@@ -42,9 +42,9 @@ To do so, first create a issue with the task you are doing, for example: "Issue 
   ```
   
 * Change Directory
-```sh
-$ cd programming
-```
+  ```sh
+  $ cd programming
+  ```
 
 * Create a branch
 
