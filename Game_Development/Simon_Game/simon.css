@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body{
+	background-color: #894568;
+	font-family: Ubuntu;
+}
+
+h1{
+	color: black;
+	font-weight: bold;
+}
+
+h2{
+	font-size: 2.2em;
+}
+
+.container{
+	position: relative;
+	left: auto;
+	right: auto;
+	margin-top: 2%;
+	background-color: #000000;
+	height: 500px;
+	width: 500px;
+	border-radius: 50%;
+	border: 2px rgba(0,0,0,0.6);
+	box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.68);
+}
+
+.colorDisplay{
+	position: absolute;
+	height: 200px;
+	width: 200px;
+}
+
+.cursor{
+	cursor: pointer;
+	cursor: hand;
+}
+
+#green{
+	left: 7%;
+	top: 7%;
+	border-top-left-radius: 100%;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	background-color: green;
+}
+
+#red{
+	right: 7%;
+	top: 7%;
+	border-top-left-radius: 0;
+	border-top-right-radius: 100%;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	background-color: red;
+}
+
+#yellow{
+	left: 7%;
+	bottom: 7%;
+	border-top-left-radius:0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 100%;
+	background-color: yellow;
+}
+
+#blue{
+	right: 7%;
+	bottom: 7%;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 100%;
+	border-bottom-left-radius: 0;
+	background-color: blue;
+}
+
+#simon,#result{
+	position: absolute;
+	z-index: 1000;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	color: black;
+	width: 240px;
+	height: 240px;
+	border-radius: 100%;
+	border: 15px solid black;
+}
+
+#switch{
+	position: absolute;
+	left: 35%;
+	top: 74%;
+}
+
+.toggle.ios, .toggle-on.ios, .toggle-off.ios{ 
+	border-radius: 20px; 
+}
+
+.toggle.ios .toggle-handle{ 
+	border-radius: 20px; 
+}
+
+#buttons{
+	position: absolute;
+	width: 100%;
+	bottom: 59%;
+}
+
+.box-shadow{
+	box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.68);
+}
+
+#count{
+	position: absolute;
+	left: 37%;
+	top: 1%;
+	width: 55px;
+	background-color: black;
+	text-align: center;
+	color: red;
+	font-size: 1.5em;
+	border-radius: 20%;
+}
+
+#count:focus{
+	outline: 0 !important;
+}
+
+#start,#reset{
+	position: absolute;
+	background-color: darkgreen;
+	left: 4%;
+	top: 2%;
+	width: 55px;
+	height: 35px;
+	color: white;
+	border-radius: 20%;
+}
+
+#reset{
+	background-color: darkblue;
+}
+
+.hide{
+	display: none;
+}
+
+#strict{
+	position: absolute;
+	background-color: darkorange;
+	right: 4%;
+	top: 2%;
+	width: 55px;
+	height: 35px;
+	color: white;
+	border-radius: 20%;
+}
+
+button:hover,
+button:focus,
+button:active{
+	outline: 0 !important;
+	text-decoration: none !important;
+}
+
+button:active{
+	transform: translateY(2px);
+	box-shadow: none !important;
+}
+
+footer{
+	margin-top: 3%;
+	text-align: center;
+	color: black;
+}
+
+a{
+	color: darkblue;
+}
+
+a:hover,
+a:focus,
+a:active{
+	text-decoration: none !important;
+	outline: 0 !important;
+}
+
+@media only screen and (max-width: 768px){
+  
+  .container{
+    width: 350px;
+    height: 350px;
+  }
+  
+  .colorDisplay{
+    width: 140px;
+    height: 140px;
+  }
+  
+  #simon{
+    width: 190px;
+    height: 190px;
+    border: 10px solid black;
+  }
+  
+  #count,#start,#strict{
+    width: 50px;
+  }
+  
+  #switch{
+    left: 33%;
+  }
+  
+}
