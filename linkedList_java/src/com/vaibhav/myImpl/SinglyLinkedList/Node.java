@@ -4,7 +4,6 @@ public class Node<T extends Comparable<T>> {
 	
 	private T data;
 	
-	//Because a node in Singly linked list has to have the reference of next node as well in addition to the data it stores
 	private Node<T> nextNode;
 	
 	private Node<T> previousNode;
