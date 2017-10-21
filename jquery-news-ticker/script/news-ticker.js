@@ -1,34 +1,48 @@
 $(document).ready(function () {
-    displayNews();
+    const newsTicker = {
+        init() {
+            this.cacheDOM();
+            this.bindEvents();
+            this.news();
+            this.ticker();
+        },
+        cacheDOM() {
+            let $el = $(".app");
+            this.$newsBox = $el.find(".news-box");
+            this.$news = $el.find(".news");
+            this.$ticker = (".ticker li p");
+        },
+        bindEvents() {
+            $(window).resize(f => {
+                this.news();
+                this.ticker();
+            });
+        },
+        news() {
+            this.tickerWidth = $(this.$ticker).width();
+            this.style = {
+                position: "absolute",
+                bottom: "-20px",
+                right: -(this.tickerWidth),
+                left: this.tickerWidth,
+                fontSize: "30px",
+                whiteSpace: "nowrap"
+            };
+            this.blockArr = $(this.$ticker).get().map(e => $(e).text());
+            this.itemNum = -1;
+        },
+        ticker() {
+            this.itemNum = this.itemNum < this.blockArr.length - 1 ? this.itemNum + 1 : 0;
+            $(this.$news).css(this.style);
+            $(this.$news).text(this.blockArr[this.itemNum]);
+            this.render();
+        },
+        render() {
+            console.log(-($(this.$news.width())[0]))
+            $(this.$news).animate({
+                left: -($(this.$news.width())[0])
+            }, 15000, "linear", this.ticker.bind(this));
+        }
+    }
+newsTicker.init();
 });
-
-let block_arr = $(".ticker li")
-    .get()
-    .map(e => e.innerHTML);
-let item_num = 0;
-news_style = {
-    position: "absolute",
-    top: "-50px",
-    right: -$(".ticker li p").width(),
-    left: $(".ticker li p").width(),
-    fontSize: "30px",
-    whiteSpace: "nowrap"
-};
-$(".news1").html(block_arr[item_num]);
-$(".news2").html(block_arr[item_num + 1])
-let news = $(".news1");
-news.css(news_style);
-let ticker_width = -$(".ticker li p").width();
-
-const ticker = () => {
-    item_num = item_num < block_arr.length - 1 ? item_num + 1 : 0;
-    $(".news1").html(block_arr[item_num]);
-    news = $(".news1");
-    news.css(news_style);
-    displayNews();
-};
-const displayNews = () => {
-    news.animate({
-        left: ticker_width
-    }, 15000, "linear", ticker);
-};
