@@ -1,0 +1,26 @@
+{
+  "name": "programming",
+  "version": "1.0.0",
+  "description": "HacktoberFest'17",
+  "main": "index.js",
+  "scripts": {
+    "tsc": " node_modules\\.bin\\ts-node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hacktoberfest17/programming.git"
+  },
+  "author": "Andrei Cioban <andr3i.mir69@gmail.com> (https://assist-software.net/team/andrei-cioban)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hacktoberfest17/programming/issues"
+  },
+  "homepage": "https://github.com/hacktoberfest17/programming#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^8.0.37",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.3"
+  }
+}

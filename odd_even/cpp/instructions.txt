@@ -1,0 +1,2 @@
+Enter a positive number. It says if is even or odd.
+0 exits the program
