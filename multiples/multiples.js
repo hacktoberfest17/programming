@@ -7,6 +7,6 @@ function generateMultiples(n) {
 	for(var i = 0; i < lengthOfArray; i++) {
 		multiples.push(n*i);
 	}
-	
+
 	return multiples;
 }

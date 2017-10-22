@@ -625,3 +625,4 @@ Programming contributors (sorted contributions)
 * **[andreicioban](https://github.com/andreicioban)**
 
 
+* **[nicktheway](https://github.com/nicktheway)**
