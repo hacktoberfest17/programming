@@ -1,3 +1,5 @@
+
+
 function mergeSort(array){
    var len = array.length;
    if(len < 2){
@@ -31,11 +33,12 @@ function merge(left, right){
        rightPtr += 1;
     }
   }  
+
   return result.concat(left.slice(leftPtr)).concat(right.slice(rightPtr));
 
 }
 
 t = [1,2,4,5,6,2,3,8,12,43]
-
+x = [2,4,5]
 console.log(mergeSort(t))
-        
+console.log(mergeSort(x))
