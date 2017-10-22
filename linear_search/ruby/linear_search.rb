@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 def linear_search(array, key)
   i = 0
   while i < array.length
