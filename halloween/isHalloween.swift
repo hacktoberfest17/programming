@@ -8,8 +8,11 @@ let day = calendar.component(.day, from: date)
 if (month == 10 && day == 31){
     print("Happy Halloween!")
 }
+else if (month == 10){
+    print("It's October, but today is not Halloween!")
+}
     
 else {
-    print("It's October, but today is not Halloween!")
+    print("It's not October")
 }
 
