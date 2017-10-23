@@ -1,18 +1,17 @@
 const http = require('http');
-const process = require('process');
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
-const html = `
+const html =
     <html>
     <head>
-        <title>Web Server</title>
+        <title>Node.js</title>
     </head>
     <body>
         <h1>Hello World</h1>
     </body>
     </html>
-`;
+    ;
 
 http.createServer(function(req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
