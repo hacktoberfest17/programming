@@ -1,0 +1,45 @@
+$date
+	Thu Mar 17 21:42:17 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module lolwa $end
+$scope module d_a $end
+$var reg 1 ! q $end
+$upscope $end
+$upscope $end
+$scope module lolwa $end
+$scope module d_a $end
+$var reg 1 " q1 $end
+$upscope $end
+$upscope $end
+$scope module lolwa $end
+$scope module d_a $end
+$var wire 1 # d $end
+$upscope $end
+$upscope $end
+$scope module lolwa $end
+$scope module d_a $end
+$var wire 1 $ c $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1$
+0#
+1"
+0!
+$end
+#5
+0$
+#15
+1#
+#30
+0"
+1!
+1$
