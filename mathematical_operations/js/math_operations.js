@@ -1,5 +1,5 @@
 //math_operations.js --- using node.js readline-sync module
-//(must install the module to run --- package.json included)
+//(must install the module to run --- package.json included) 
 const rlSync = require('readline-sync');
 
 const a = parseInt(rlSync.question("First integer: "));
