@@ -1,9 +1,10 @@
 using namespace std;
 
-#include <iostream>
+#include<iostream>
+#include<conio>
 
 int main()
-{
+{	clrscr();
 	int BirthMonth, BirthYear;
 	int CurrentMonth, CurrentYear;
 	int AgeYear, AgeMonth;
@@ -12,13 +13,13 @@ int main()
 	cout<<"Enter Your Birth Year(Eg:1989):";
 	cin>>BirthYear;
 	
-	cout<<"\n\nEnter Your Birth Month(Eg:7):";
+	cout<<"\n\t\tEnter Your Birth Month(Eg:7):";
 	cin>>BirthMonth;
 	
-	cout<<"\nEnter The Current Month(Eg:7):";
+	cout<<"\n\t\tEnter The Current Month(Eg:7):";
 	cin>>CurrentMonth;
 	
-	cout<<"\nEnter The Current Year(Eg:2010):";
+	cout<<"\n\t\tEnter The Current Year(Eg:2010):";
 	cin>>CurrentYear;
 	
 	AgeYear=CurrentYear-BirthYear;
