@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Chrome first Link",
+  "short_name": "CFL",
+  "description": "Opens the first link on the page in chrome browser",
+  "version": "0.0.1",
+  "minimum_chrome_version": "38",
+
+  "icons": {
+    "16": "assets/icon_16.png",
+    "128": "assets/icon_128.png"
+  },
+
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  }
+}
