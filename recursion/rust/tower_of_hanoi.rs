@@ -1,6 +1,11 @@
 use std::io::{stdin, stdout, Write};
 
 /// Recursively prints out the rod placement of discs.
+///
+/// * `height` - Number of discs to use.
+/// * `from` - Starting rod.
+/// * `spare` - Temporary rod.
+/// * `to` - End rod.
 fn tower_of_hanoi(height: i32, from: &str, spare: &str, to: &str) {
     if height <= 1 {
         return println!("Move disc {} from rod {} to rod {}", height, from, to);
