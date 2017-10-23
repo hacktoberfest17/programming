@@ -862,3 +862,5 @@ Programming contributors (sorted contributions)
 * **[samfrey99](https://github.com/samfrey99)**
 
 * **[jngarcia](https://github.com/jngarcia)**
+
+* **[craftman32](https://github.com/craftman32)**
