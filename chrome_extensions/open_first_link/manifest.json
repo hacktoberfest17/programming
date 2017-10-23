@@ -1,19 +1,15 @@
 {
-  "manifest_version": 2,
-  "name": "Chrome first Link",
-  "short_name": "CFL",
-  "description": "Opens the first link on the page in chrome browser",
-  "version": "0.0.1",
-  "minimum_chrome_version": "38",
-
-  "icons": {
-    "16": "assets/icon_16.png",
-    "128": "assets/icon_128.png"
+  "name": "Chrome open link",
+  "version": "2.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
   },
-
-  "app": {
-    "background": {
-      "scripts": ["main.js"]
-    }
-  }
+  "browser_action": {
+    "default_title": "Open first link in tab"
+  },
+  "manifest_version": 2
 }
