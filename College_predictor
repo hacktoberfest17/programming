@@ -1,0 +1,15 @@
+import javax.swing.JOptionPane;
+
+
+if (a<1000)
+    JOptionPane.showMessageDialog(null,"Congrats shithead,you can choose IIT Bombay,Delhi,Kharagpur,Kanpur,Madras");
+else
+{if (a<3000)
+   JOptionPane.showMessageDialog(null,"You will be getting IIT Guwahati,Varanasi,Roorkee");
+ else
+ {if (a<5000)
+      JOptionPane.showMessageDialog(null,"You will be getting IIT Hyderabad,Indore,Gandhinagar");
+  else
+      JOptionPane.showMessageDialog(null,"Stop Dreaming about IIT's");
+ }
+}
