@@ -14,7 +14,9 @@
         .header {
             font-weight: 300;
         }
-
+        .slow-style {
+            transition: 0.5s;
+        }
         .page_header {
             height: 20rem;
         }
@@ -69,7 +71,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <h1 class="purple-text header">Contributors</h1>
+            <h1 class="purple-text header center">Contributors</h1>
         </div>
         <div class="row" id="contributor_list">
             
@@ -114,10 +116,16 @@
             var elems = ""; 
             data.forEach(function(item) {
                 //console.log(item);
-                elems+='<div class="col s12 m4"><div class="card small"><div class="card-image"><img src=\"'+item['avatar_url']+'\"><span class="card-title">'+item["login"]+'</span></div><div class="card-content"><p>#'+item["contributions"]+' contributions</p></div><div class="card-action"><a target="_blank" class="purple-text" href="'+item["html_url"]+'">My Profile</a></div></div></div>';
+                elems+='<div class="col s12 m4"><div class="card small"><div class="card-image"><img src=\"'+item['avatar_url']+'\" class="slow-style"><span class="card-title slow-style">'+item["login"]+'</span></div><div class="card-content"><p>#'+item["contributions"]+' contribution(s)</p></div><div class="card-action center"><a target="_blank" class="purple-text" href="'+item["html_url"]+'">My Profile</a></div></div></div>';
             });
             $("#contributor_list").append(elems);
-            
+            $("#contributor_list .card-image span").hover(function(){
+                    $(this).siblings("img").css({"opacity": 0.2});
+                    $(this).css({"text-align": "center", "color": "black"});
+            }, function() {
+                    $(this).siblings("img").css({"opacity": 1});
+                    $(this).css({"text-align": "left", "color": "white"});
+            });
         }
     </script>
 </body>
