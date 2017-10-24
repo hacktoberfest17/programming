@@ -1,82 +1,133 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Contributors</title>
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<!-- jQuery library -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<!-- Latest compiled JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>programming | A repo for first time contributors</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection" />
 
-		<script type="text/javascript">
-		$.ajax({
-			    url: "https://api.github.com/repos/hacktoberfest17/programming/contributors",
-			    headers: { 
-			      
-			      'Accept': 'application/json' 
-			    },
-			    type: "GET",
-			    success: function(data, textStatus, request){
-			      var link = request.getResponseHeader('Link');
-			      var i = link.lastIndexOf("page=");
-			      var j = link.lastIndexOf(">");
-			      var get_tot_pages = link.substring(i+5,j);
-			    
-			      var tot_pages = parseInt(get_tot_pages, 10);
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .header {
+            font-weight: 300;
+        }
+        .slow-style {
+            transition: 0.5s;
+        }
+        .page_header {
+            height: 20rem;
+        }
 
-			     var page=1;
+        @media only screen and (max-width: 400px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+            h5 {
+                font-size: 1rem;
+            }
+            .page_header {
+                height: 15rem;
+            }
+        }
 
-			     for(page=1;page<=tot_pages+1;page++){
-			     	jQuery.ajax({
-			     type: "GET",
-			     url: "https://api.github.com/repos/hacktoberfest17/programming/contributors?page="+page,
-			     success: function(data)
-			     {
-			    
-			     jQuery.each(data, function(i, val) {
-			     var qwerty = '<li style="padding:10px;display:inline-block;">';
-			     	qwerty+='<div class="well" style="width: 300px;height: 300px;"><center><img style="height: 180px;width: 180px;border-radius: 50%;" class="centered-and-cropped" src="'+val.avatar_url+'"><h3 style="display: inline;"><br><a href="https://github.com/'+val.login+'">'+val.login+'</a></h3><hr><a href="https://github.com/hacktoberfest17/programming/commits?author='+val.login+'">'+ val.contributions +' Commits</a></center></div>';
-			     qwerty+='</li>';
-			     $('#list').append(qwerty);
-			     });
-			     }
-			     }); 
-			     }
-			    },
-			    
-			  });
+        @media only screen and (min-width: 400px) and (max-width: 600px) {
+            .page_header {
+                height: 25rem;
+            }
+        }
 
-			
-		</script>
-		
-	</head>
-	<body>
-		
-		
-		<div class="container-fluid" style="background-color: #333;">
-			
-			<center>
-			<div style="height: 200px;background-color: #333;" class="text-center">
-				<h1 style="color: white;padding-top: 10px;font-family: 'Baloo Chettan', cursive;">programming</h1>
-				<h5 style="color: white;padding-left: 100px;padding-right: 100px;padding-top: 10px;font-family: 'Noto Sans', sans-serif;">
-				<i>Celebrate <a style="color: white" href="https://hacktoberfest.digitalocean.com/"><u>HacktoberFest</u></a> by getting involved in the Open Source Community by completing some simple tasks in this <a style="color: white" href="https://github.com/hacktoberfest17/programming"><u>project</u></a>.
-				</i></h5>
-				<br>
-			<a href="https://github.com/hacktoberfest17/programming"><button class="btn btn-default btn-lg">Start Hacking</button></a>
-			
-		</div>
-		<h3 style="color: white;font-family: 'Baloo Chettan', cursive;
-">Contributors :</h3>
-		</center>
-		
-		<center>
-		<ul id="list">
-		</ul>
-		</center>
-	</div>
-	
+        .margin-top-20 {
+            margin-top: 20px
+        }
+        /*footer*/
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="had-container page_header  purple darken-2  white-text valign-wrapper">
+        <div class="row ">
+            <div class="col s12 m12 l12 center-align">
+                <h1 class="project-name header">programming</h1>
+                <h5 class="project-tagline  light purple-text text-lighten-4">Celebrate HacktoberFest with your first contribution</h5>
+                <a href="https://github.com/hacktoberfest17/programming" target="_blank" class="waves-effect waves-light btn   white purple-text margin-top-20">Start Coding</a>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <h1 class="purple-text header center">Contributors</h1>
+        </div>
+        <div class="row" id="contributor_list">
+            
+        </div>
+    </div>
+
+    <footer class="page-footer purple darken-3">
+        <div class="footer-copyright">
+            <div class="container">
+                <!--© 2014 Copyright Text
+            <a class=" grey-text text-lighten-4 right" href="#!">More Links</a>-->
+            </div>
+        </div>
+    </footer>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+        function getContribList(current_page, final_page) {
+            $.getJSON("https://api.github.com/repos/hacktoberfest17/programming/contributors?page=" + current_page, function(data, textStatus, xhr) {
+                //console.log(data);
+                populateList(data);
+
+                if (current_page == 1) {
+                    const regex = /(page=)([0-9]*)/gi;
+                    var str = xhr.getResponseHeader("Link").split(",")[1]
+                    m = regex.exec(str)
+                    final_page = m[2];
+                }
+                current_page += 1;
+                if (current_page > final_page)
+                    return true;
+                else
+                    return getContribList(current_page, final_page);
+
+            });
+        }
+        getContribList(1, 2);
+
+        function populateList(data) {
+            var elems = ""; 
+            data.forEach(function(item) {
+                //console.log(item);
+                elems+='<div class="col s12 m4"><div class="card small"><div class="card-image"><img src=\"'+item['avatar_url']+'\" class="slow-style"><span class="card-title slow-style">'+item["login"]+'</span></div><div class="card-content"><p>#'+item["contributions"]+' contribution(s)</p></div><div class="card-action center"><a target="_blank" class="purple-text" href="'+item["html_url"]+'">My Profile</a></div></div></div>';
+            });
+            $("#contributor_list").append(elems);
+            $("#contributor_list .card-image span").hover(function(){
+                    $(this).siblings("img").css({"opacity": 0.2});
+                    $(this).css({"text-align": "center", "color": "black"});
+            }, function() {
+                    $(this).siblings("img").css({"opacity": 1});
+                    $(this).css({"text-align": "left", "color": "white"});
+            });
+        }
+    </script>
 </body>
+
 </html>
