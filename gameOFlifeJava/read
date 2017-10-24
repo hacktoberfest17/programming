@@ -1,1 +1,6 @@
-any comments
+This programm generates a field with 100x100 and fill it up with random dead or life
+afther that the programm runs through the rules of game of life 100 times.
+
+The solution is of every step will be shown every second in the consol.
+
+Plans for the future: creat an graphic window where everything will be shown.
