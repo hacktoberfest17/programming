@@ -1,0 +1,38 @@
+$date
+	Thu Feb 11 22:05:14 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module wb $end
+$scope module my_tgtest $end
+$var reg 1 ! i1 $end
+$upscope $end
+$upscope $end
+$scope module wb $end
+$scope module my_tgtest $end
+$var reg 1 " i2 $end
+$upscope $end
+$upscope $end
+$scope module wb $end
+$scope module my_tgtest $end
+$var wire 1 # a1 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0#
+0"
+0!
+$end
+#2
+1#
+1!
+#7
+0#
+0!
+#9

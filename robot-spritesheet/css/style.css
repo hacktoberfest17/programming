@@ -1,0 +1,105 @@
+body {
+  background-color: #222;
+  text-align: center;
+}
+#robotoA {
+  position: absolute;
+  top: 8px;
+  left: 50px;
+  height: 88px;
+  width: 50px;
+  background: url(../images/robosheet.png);
+  background-position: 0px 0px;
+}
+
+#robotoB {
+  position: absolute;
+  top: 108px;
+  left: 50px;
+  height: 88px;
+  width: 52px;
+  background: url(../images/robosheet.png);
+  background-position: 0px -80px;
+  position: absolute;
+}
+#robotoC {
+  position: absolute;
+  top: 208px;
+  left: 50px;
+  height: 88px;
+  width: 50px;
+  background: url(../images/robosheet.png);
+  background-position: 0px -170px;
+}
+#robotoD {
+  position: absolute;
+  top: 304px;
+  left: 50px;
+  height: 88px;
+  width: 60px;
+  background: url(../images/robosheet.png);
+  background-position: 0px -295px;
+}
+#robotoE {
+  position: absolute;
+  top: 388px;
+  left: 50px;
+  height: 88px;
+  width: 50px;
+  background: url(../images/robosheet.png);
+  background-position: -15px -380px;
+}
+#robotoF {
+  position: absolute;
+  top: 478px;
+  left: 50px;
+  height: 88px;
+  width: 80px;
+  background: url(../images/robosheet.png);
+  background-position: -10px -470px;
+}
+#robotoG {
+  position: absolute;
+  top: 573px;
+  left: 50px;
+  height: 88px;
+  width: 61px;
+  background: url(../images/robosheet.png);
+  background-position: -6px -565px;
+}
+#robotoH {
+  position: absolute;
+  top: 672px;
+  left: 50px;
+  height: 88px;
+  width: 60px;
+  background: url(../images/robosheet.png);
+  background-position: 7px -664px;
+}
+#robotoI {
+  position: absolute;
+  top: 770px;
+  left: 50px;
+  height: 88px;
+  width: 50px;
+  background: url(../images/robosheet.png);
+  background-position: 0px -763px;
+}
+#robotoJ {
+  position: absolute;
+  top: 858px;
+  left: 50px;
+  height: 110px;
+  width: 50px;
+  background: url(../images/robosheet.png);
+  background-position: 0px -877px;
+}
+#robotoK {
+  position: absolute;
+  top: 970px;
+  left: 50px;
+  height: 140px;
+  width: 50px;
+  background: url(../images/robosheet.png);
+  background-position: 0px -1000px;
+}

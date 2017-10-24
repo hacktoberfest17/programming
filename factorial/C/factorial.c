@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<conio.h>
  
 int result[1000] = {0};
 
@@ -16,11 +17,12 @@ int fact_dp(int n)
 
 int main()
 {
+	clrscr();
 	int n;
 	printf("Enter a number : ");
 	scanf("%d",&n);
 	if(n<=0)
 		printf("1\n");
 	else
-		printf("Factorial :%d\n",fact_dp(n));
+		printf("\nFactorial of the given number is :%d",fact_dp(n));
 }

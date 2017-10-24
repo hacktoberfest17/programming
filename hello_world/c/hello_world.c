@@ -2,9 +2,11 @@
 #include <stdio.h>
 #include <conio.h>
 // Execution of the program begins with the main() function.
-void main()
+int main(void)
 {
    // printf() displays the string inside quotation
-   printf("Hello, World!");
+   puts("Hello, World!");
    getch();
+
+   return 0; /* Exit the program with return code 0 (success) */
 }

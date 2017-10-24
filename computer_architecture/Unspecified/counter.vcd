@@ -1,0 +1,49 @@
+$date
+	Thu Mar 17 22:35:16 2016
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$scope module in $end
+$var reg 1 ! b $end
+$upscope $end
+$upscope $end
+$scope module testbench $end
+$scope module in $end
+$var reg 1 " c $end
+$upscope $end
+$upscope $end
+$scope module testbench $end
+$scope module in $end
+$var wire 1 # e $end
+$upscope $end
+$upscope $end
+$scope module testbench $end
+$scope module in $end
+$var wire 1 $ f $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1$
+0#
+0"
+0!
+$end
+#5
+1#
+0$
+1"
+#15
+1$
+0"
+1!
+#30
+0#
+0$
+1"
