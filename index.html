@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contributors</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+
+		<script type="text/javascript">
+		$.ajax({
+			    url: "https://api.github.com/repos/hacktoberfest17/programming/contributors",
+			    headers: { 
+			      
+			      'Accept': 'application/json' 
+			    },
+			    type: "GET",
+			    success: function(data, textStatus, request){
+			      var link = request.getResponseHeader('Link');
+			      var i = link.lastIndexOf("page=");
+			      var j = link.lastIndexOf(">");
+			      var get_tot_pages = link.substring(i+5,j);
+			    
+			      var tot_pages = parseInt(get_tot_pages, 10);
+
+			     var page=1;
+
+			     for(page=1;page<=tot_pages+1;page++){
+			     	jQuery.ajax({
+			     type: "GET",
+			     url: "https://api.github.com/repos/hacktoberfest17/programming/contributors?page="+page,
+			     success: function(data)
+			     {
+			    
+			     jQuery.each(data, function(i, val) {
+			     var qwerty = '<li style="padding:10px;display:inline-block;">';
+			     	qwerty+='<div class="well" style="width: 300px;height: 300px;"><center><img style="height: 180px;width: 180px;border-radius: 50%;" class="centered-and-cropped" src="'+val.avatar_url+'"><h3 style="display: inline;"><br><a href="https://github.com/'+val.login+'">'+val.login+'</a></h3><hr><a href="https://github.com/hacktoberfest17/programming/commits?author='+val.login+'">'+ val.contributions +' Commits</a></center></div>';
+			     qwerty+='</li>';
+			     $('#list').append(qwerty);
+			     });
+			     }
+			     }); 
+			     }
+			    },
+			    
+			  });
+
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		
+		<div class="container-fluid" style="background-color: #333;">
+			
+			<center>
+			<div style="height: 200px;background-color: #333;" class="text-center">
+				<h1 style="color: white;padding-top: 10px;font-family: 'Baloo Chettan', cursive;">programming</h1>
+				<h5 style="color: white;padding-left: 100px;padding-right: 100px;padding-top: 10px;font-family: 'Noto Sans', sans-serif;">
+				<i>Celebrate <a style="color: white" href="https://hacktoberfest.digitalocean.com/"><u>HacktoberFest</u></a> by getting involved in the Open Source Community by completing some simple tasks in this <a style="color: white" href="https://github.com/hacktoberfest17/programming"><u>project</u></a>.
+				</i></h5>
+				<br>
+			<a href="https://github.com/hacktoberfest17/programming"><button class="btn btn-default btn-lg">Start Hacking</button></a>
+			
+		</div>
+		<h3 style="color: white;font-family: 'Baloo Chettan', cursive;
+">Contributors :</h3>
+		</center>
+		
+		<center>
+		<ul id="list">
+		</ul>
+		</center>
+	</div>
+	
+</body>
+</html>
