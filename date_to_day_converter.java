@@ -1,6 +1,7 @@
 //POJO class
 //Program to Convert date into day
-public class Converter {     //class of conversion
+import java.util.*;
+class Converter {     //class of conversion
 	//int dob[]=new int[8]; //not required but can be used
 	int year;
 	int month;
@@ -50,7 +51,7 @@ public class Converter {     //class of conversion
 		 return Reminder-=1;
 		}
 		else 
-			return Reminder;
+        	return Reminder;
 	}//end of getReminder()
 	void getDay(int reminder)  //Function to find out and display the actual day on the given date
 	{
@@ -70,11 +71,10 @@ public class Converter {     //class of conversion
 		{
 			System.out.println("Sunday");
 		}
-        }
+	}  
 }
 //Driver class
-import java.util.*;
-public class DrivingDay extends Converter{  //Driver class for Converter
+class DrivingDay extends Converter{  //Driver class for Converter
 	public static void main(String[] args) {  //main() method
 		System.out.println("Welcome to Birth-Day Calculator");
 		Scanner sc = new Scanner(System.in);  //Scanner object for taking input
