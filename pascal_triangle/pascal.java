@@ -1,24 +1,22 @@
-import java.io.*;
 import java.util.Scanner;
-class pascal{
+/**
+ * Pascal Triangle
+ *
+ */
+class PascalTriangle{
 	public static void main(String arg[]){
+		printSumOfAllNumbersInTheRow();
+	}
+	/*
+	 * This method takes user inputs and calculates sum of all numbers in that row.
+	 * For ease of the user, row number starts with 1.
+	 */
+	private static void printSumOfAllNumbersInTheRow(){
 		Scanner in=new Scanner(System.in);
-		System.out.println("Enter no of rows n");
-		int n=in.nextInt();
-		int[][] a=new int[n][n];
-		for(int i=0;i<n;i++){
-			a[i][i]=1;
-			a[i][0]=1;
-		}
-			
-		
-		for(int i=2;i<n;i++)
-		{for(int j=1;j<i;j++)
-			{
-				a[i][j]=a[i-1][j]+a[i-1][j-1];
-			}
-		}
-		for(int i=0;i<n;i++)
-			System.out.println(a[n][i]);
+		System.out.println("Enter the row number of the Pascal Tringle");
+		int rowNumber = in.nextInt();
+		in.close();
+		int SumOfAllNumbersInTheRow=(int)java.lang.Math.pow(2, rowNumber-1);
+		System.out.println("Sum of all numbers in  the row number: "+ rowNumber +" of the Pascal Tringle is = "+ SumOfAllNumbersInTheRow);
 	}
 }
