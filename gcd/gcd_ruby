@@ -1,0 +1,7 @@
+def gcd(a, b)
+   return b if a ==0
+   return a if b == 0
+   return b if (a%b == 0)
+   return a if (b%a == 0)
+  (a > b)? gcd(a, a%b) : gcd(b%a, b)
+end
