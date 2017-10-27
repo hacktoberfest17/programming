@@ -1,0 +1,11 @@
+    //Input Validation for Integer's
+    public static int getInt(Scanner sc) {
+        int num;
+
+        while (!sc.hasNextInt()) {
+            System.out.println("Not an integer, Try again");
+            sc.next();
+        }
+        num = sc.nextInt();
+        return num;
+    }
