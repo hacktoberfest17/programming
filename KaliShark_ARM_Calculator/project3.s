@@ -1,5 +1,6 @@
 @Weston Cannon
 
+
 @r6 is what will be used to hold subtracted value
 
 .equ SEG_A @ Top
