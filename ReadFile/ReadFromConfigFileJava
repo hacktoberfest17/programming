@@ -1,0 +1,16 @@
+private Properties getProperties() {
+        Properties p = new Properties();
+
+        //File path for config file
+        String fileName = "";
+
+        try {
+            InputStream is = new FileInputStream(fileName);
+            p.load(is);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return p;
+    }
