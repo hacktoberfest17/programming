@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define ll long long
+#define ll long long int
 
 using namespace std;
 vector<ll> gr[1010];
