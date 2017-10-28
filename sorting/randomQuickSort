@@ -1,0 +1,75 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+int PARTITION(int [],int ,int );
+void R_QUICKSORT(int [],int ,int );
+int R_PARTITION(int [],int,int );
+
+int main()
+{
+    int n;
+    printf("Enter the size of the array\n");
+    scanf("%d",&n);
+    int a[n];
+    printf("Enter the elements in the array\n");
+    for(int i=1;i<=n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+
+    printf("sorting using randomized quick sort\n");
+    int p=1,r=n;
+
+    R_QUICKSORT(a,p,r);
+
+   printf("sorted form\n");
+   for(int i=1;i<=n;i++)
+   {
+       printf("a[%d]=%d\n", i, a[i]);
+   }
+     return 0;
+}
+
+void R_QUICKSORT(int a[],int p,int r)
+    {
+        int q;
+        if(p<r)
+        {
+         q=R_PARTITION(a,p,r);
+         R_QUICKSORT(a,p,q-1);
+         R_QUICKSORT(a,q+1,r);
+        }
+    }
+
+ int R_PARTITION(int a[],int p,int r)
+ {
+        int i=p+rand()%(r-p+1);
+        int temp;
+        temp=a[r];
+        a[r]=a[i];
+        a[i]=temp;
+        return PARTITION(a,p,r);
+  }
+
+ int PARTITION(int a[],int p,int r)
+ {
+        int temp,temp1;
+        int x=a[r];
+        int i=p-1;
+        for(int j=p;j<=r-1;j++)
+        {
+            if(a[j]<=x)
+            {
+
+                i=i+1;
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+        temp1=a[i+1];
+        a[i+1]=a[r];
+        a[r]=temp1;
+        return i+1;
+  }
