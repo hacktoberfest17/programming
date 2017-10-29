@@ -1,6 +1,7 @@
 //Language: C
 //Author: Akemy
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
