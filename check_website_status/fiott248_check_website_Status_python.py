@@ -12,4 +12,3 @@ def check_url( url, timeout=10 ):
 print "please enter a website to check the status. don`t forget to add the http://"
 site = raw_input()
 print check_url(site)
-
