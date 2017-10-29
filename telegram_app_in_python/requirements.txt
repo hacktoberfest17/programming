@@ -1,0 +1,2 @@
+telepot==12.3
+urllib3==1.22
