@@ -1069,4 +1069,4 @@ Programming contributors (sorted contributions)
 
 * **[EkamWalia](https://github.com/EkamWalia)**
 
-* **[PongsakornAjc](https://github.com/PongsakornAjc)**
+* **[Pongsakorn Ajchariyasakchai](https://github.com/PongsakornAjc)**
