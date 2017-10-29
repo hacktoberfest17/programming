@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 int main(){
-int fahr, celsius;
+int celsius,kelvin;
 int lower, upper, step;
 
-lower = -100;
-upper = 300;
+lower = 0;
+upper = 100;
 step = 5;
 
-fahr = lower;
-while(fahr <= upper){
-celsius = 5*(fahr-32)/9;
-printf("%d\t%d\n", fahr, celsius);
-fahr = fahr+step;
+celsius = lower;
+while(celsius <= upper){
+kelvin = celsius+273;
+printf("%d\t%d\n", celsius, kelvin);
+celsius = celsius+step;
 }
 }
