@@ -23,4 +23,5 @@ def main():
     print(fatorial(number))
 
 
-main()
+if __name__ == "__main__":
+    main()
