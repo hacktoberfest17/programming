@@ -1,0 +1,22 @@
+// Computing the GCD of two very big numbers that cant be fit in long data type
+
+import java.util.*;
+import java.math.*;
+class GCD {
+
+public static void main(String args[]) {
+		Scanner sc  = new Scanner(System.in);
+		
+		// input from user and compute GCD
+		
+		BigInteger a = new BigInteger(sc.next());
+		BigInteger b = new BigInteger(sc.next());
+		BigInteger gcd = a.gcd(b);
+		
+		// Printing the GCD
+		
+		System.out.println("The GCD of two big numbers = " + gcd);
+		
+		sc.close();
+	}
+}
