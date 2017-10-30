@@ -1,0 +1,38 @@
+<html>
+<head>
+
+<title>Simple Clock</title>
+
+<style>
+	body {
+		background-color: #27293e;
+	}
+	body > * {
+		font-family: Verdana, Geneva, sans-serif;
+	}
+	#title-text {
+		color: #dc00ff;
+	}
+</style>
+
+</head>
+
+<body style="text-align: center;">
+	<H1 id="title-text">Random pic :)</H1>
+	<img id="img-viewer" src="https://picsum.photos/800/500/?random"></img>
+</body>
+
+<script>
+
+	var imgInt = 0;
+
+	var setTime = function(){
+		imgInt ++;
+		document.getElementById("img-viewer").src = "https://picsum.photos/800/500/?random&" + imgInt;
+	}
+
+	setTime();
+	window.setInterval(setTime, 5000);
+</script>
+
+</html>
