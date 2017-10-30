@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1413952846 source:f:\kuliah\semester 3\strukdat\ilmu bagus\ujian_list_ftf\main.c
+	"sirah.h"
+
+1413953231 f:\kuliah\semester 3\strukdat\ilmu bagus\ujian_list_ftf\sirah.h
+	<stdio.h>
+	<stdlib.h>
+
+1413952734 source:f:\kuliah\semester 3\strukdat\ilmu bagus\ujian_list_ftf\listirahat.c
+	"sirah.h"
+
+1414345176 source:f:\kuliah\semester 3\strukdat\ilmu bagus\a11.2013.07396\listirahat.c
+	"sirah.h"
+
+1414345176 f:\kuliah\semester 3\strukdat\ilmu bagus\a11.2013.07396\sirah.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1414344534 source:f:\kuliah\semester 3\strukdat\ilmu bagus\a11.2013.07396\main.c
+	"sirah.h"
+
+1414923174 source:d:\kuliah\semester 3\strukdat\ilmu bagus\a11.2013.07396\listirahat.c
+	"sirah.h"
+
+1414922722 d:\kuliah\semester 3\strukdat\ilmu bagus\a11.2013.07396\sirah.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1414976441 source:d:\kuliah\semester 3\strukdat\ilmu bagus\a11.2013.07396\main.c
+	"sirah.h"
+
