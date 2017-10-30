@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Check your hacktoberfest contributions at:
  [hacktoberfest.digitalocean.com/stats](https://hacktoberfest.digitalocean.com/stats/t2013anurag)
 
@@ -1066,6 +1065,7 @@ Programming contributors (sorted contributions)
 
 * **[kserno](https://github.com/kserno)**
 
+* **[aiya000](https://github.com/aiya000)**
 
 =======
 ## Check your hacktoberfest contributions at:
@@ -2081,5 +2081,5 @@ Programming contributors (sorted contributions)
 
 * **[kserno](https://github.com/kserno)**
 
-
->>>>>>> 131b1241b9d37b312280546529723d5ae3138441
+=======
+* **[EkamWalia](https://github.com/EkamWalia)**
