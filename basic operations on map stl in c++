@@ -1,0 +1,40 @@
+#include <iostream>
+#include <map>
+#include<cstdio>
+#include<inttypes.h>
+#include<stdint.h>
+#define ll long long
+using namespace std;
+int main(){
+map <char,int> mp;
+map <char,int> mymap,mymap1;
+//insert elements individually in map with the combination of key valueand value of element
+
+mp.insert(pair<char,int>('a',2)); //key is 'c' and 2 is value.
+mp.insert(pair<char,int>('b',1));
+mp.insert(pair<char,int>('c',43));
+mp.insert(pair<char,int>('y',43));
+mp.insert(pair<char,int>('u',43));
+
+//inserts elements in range using insert() function in map 'mymap'.
+
+
+//declaring iterator for map
+map <char,int>::iterator it;
+//using find() function to return reference of element mapped by key'b'.
+
+
+
+for(it=mp.begin();it!=mp.end();it++)
+{
+cout<<it->first<<" "<<it->second<<endl;
+}
+
+mymap.insert(mp.begin(),mp.end());
+mymap.swap(mp);
+for(it=mymap.end();it!=mymap.begin();it--)
+{
+cout<<it->first<<" "<<it->second<<endl;
+}
+return 0;
+}
