@@ -1,0 +1,60 @@
+#include <iostream>
+   #include <vector>
+    using namespace std;
+
+    vector <int> v[14];
+    bool visited[14];
+    int flag =0;
+    //node b is 6 here --> 0 based index
+    int d = 6;
+    void dfs(int s) {
+
+        visited[s] = true;
+        if(s==d)
+        {
+            flag= 1;
+        }
+      //  cout<<s+1<<"\n";
+        for(int i = 0;i < v[s].size();++i)    {
+         if(visited[v[s][i]] == false)
+             dfs(v[s][i]);
+        }
+    }
+
+    void initialize() {
+        for(int i = 0;i < 10;++i)
+         visited[i] = false;
+    }
+
+    int main() {
+     //establishing the connections as needed 
+    v[0].push_back(1);
+    v[1].push_back(2);
+    v[2].push_back(3);
+    v[3].push_back(1);
+    v[2].push_back(6);
+    v[6].push_back(7);
+    v[6].push_back(8);
+    v[8].push_back(10);
+    v[9].push_back(7);
+    v[8].push_back(9);
+    v[4].push_back(5);
+    v[0].push_back(11);
+    v[0].push_back(13);
+    v[11].push_back(12);
+   //node a --->10
+     dfs(10);
+    if(flag == 1)
+    {
+        cout<<"path exists";
+    }
+     else
+     {
+         cout<<"path doesn't exist";
+     }
+
+
+
+
+        return 0;
+    }
