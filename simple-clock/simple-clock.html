@@ -1,0 +1,43 @@
+<html>
+<head>
+
+<title>Simple Clock</title>
+
+<style>
+	body {
+		background-color: #27293e;
+	}
+	body > * {
+		font-family: Verdana, Geneva, sans-serif;
+	}
+	#time-viewer {
+		color: #00ff00;
+		font-weight: bold;
+		font-size: 10em;
+	}
+	#title-text {
+		color: #dc00ff;
+	}
+</style>
+
+</head>
+
+<body style="text-align: center;">
+	<H1 id="title-text">What time is it?</H1>
+	<span id="time-viewer">00:00</span>
+</body>
+
+<script>
+
+	var setTime = function(){
+		var date = new Date();
+		document.getElementById("time-viewer").innerHTML = "" + date.getHours() + ":" 
+															+ date.getMinutes() + ":"
+															+ date.getSeconds();
+	}
+
+	setTime();
+	window.setInterval(setTime, 1000);
+</script>
+
+</html>
