@@ -3,24 +3,23 @@ import java.util.Scanner;
  * Created by buddhimah on 10/16/2017.
  */
 public class Factorial {
-    public static  int fac(int number){
-        int r;
-        if(number == 1){
+    public static  int fac(int number) {
+        int result;
+        if (number == 1) {
             return 1;
         }
-        r = fac(number - 1)*number;
-        return r;
-   }
-    public static void main(String args[]){
+        result = fac(number - 1) * number;
+        return result;
+    }
+    
+   public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number: ");
-        int num =sc.nextInt();
-        if(num < 0){
-            Error a = new Error("factorial for negative numbers is undefined");
-            System.out.println(a.getMessage());
-            Factorial.main(new String[1]);
-        }else {
+        try {
+            int num = sc.nextInt();
             System.out.println(fac(num));
+        } catch (Exception e) {
+            System.err.println("Illegal number: " + sc.next() + "!");
         }
     }
 }
