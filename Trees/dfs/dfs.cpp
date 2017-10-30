@@ -47,6 +47,7 @@ int main()
     return 0;
 }
 /*
+Input
 8 9
 0 1
 0 2
