@@ -1,10 +1,11 @@
 #include <stdio.h>
-
+#define double d;
+#define long l;
 
 void main(){
 
 //declarations
-double num1, num2;
+d num1, num2;
 char op;
 
 printf("Enter the calculation:\n");
