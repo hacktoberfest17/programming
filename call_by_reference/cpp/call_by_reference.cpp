@@ -8,7 +8,8 @@
 using namespace std;
 
 // function declaration
-void swap(int &n1, int &n2);
+template <class X>
+void swap(X &n1, X &n2);
 
 int main ()
 {
@@ -25,9 +26,9 @@ int main ()
    return 0;
 }
 /*function definition*/
-void swap(int &num1, int &num2)
+void swap(X &num1, X &num2)
 {
-   int temp;
+   X temp;
    temp = num1; /* save the value at address num1 in another variable*/
    num1 = num2;
    num2 = temp;
