@@ -1,8 +1,5 @@
+#include<bits/stdc++.h>
 using namespace std;
-
-#include<iostream>
-#include<conio>
-
 int main()
 {	clrscr();
 	int BirthMonth, BirthYear;
