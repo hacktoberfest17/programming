@@ -1,0 +1,120 @@
+import pymysql
+from tkinter import *
+from tkinter.messagebox import *
+import Pmw
+
+import numpy as np
+import random
+#import scipy
+#import scipy.integrate as integrate
+#from scipy.optimize import optimize
+
+import sympy
+from sympy import symbols, diff
+import matplotlib.pyplot as plt
+
+from numpy.polynomial import polynomial as poly
+
+
+class QueryWindow(Frame):
+    """GUI DB Query Frame"""
+
+    def __init__(self):
+        """QueryWindow constructor"""
+
+        Frame.__init__(self)
+        Pmw.initialise()
+        self.pack(expand = YES, fill = BOTH)
+        self.master.title(\
+            "Your Very Own Genie.....")
+        self.master.geometry("900x800")
+
+        # scrolled text pane for query string
+        self.query = Pmw.ScrolledText(self, text_height = 3)
+        self.query.pack(fill = X)
+
+        top = Frame(self)
+        bottom = Frame(self)
+        top.pack(side=TOP)
+        bottom.pack(side=BOTTOM, fill=BOTH, expand=True)
+
+        #button to submit query
+        self.submit = Button(self, text = "Run Query",width=20,height=2,
+                             command = self.submitQuery)
+        #self.submit.pack(side="top")
+       
+        #button to clear query
+        self.cancel = Button(self,text="Start Fresh",width=20,height=2,
+                             command=self.closeWindow)
+        #self.cancel.pack(side="bottom")
+
+        self.submit.pack(in_=top, side=LEFT)
+        self.cancel.pack(in_=top, side=LEFT)
+
+        # Frame to display query results
+        self.frame = Pmw.ScrolledFrame(self,
+                                       hscrollmode="static",vscrollmode="static")
+        self.frame.pack(expand = YES, fill = BOTH)
+
+        self.panes = Pmw.PanedWidget(self.frame.interior(),
+                                     orient = "horizontal")
+        self.panes.pack(expand = YES, fill = BOTH)
+    
+    def closeWindow(self):
+        self.query.clear()    
+        
+    def submitQuery(self):
+        """Execute user enterd Query"""
+        #open connection, retrieve cursor and execute query
+
+        try:
+            connection = pymysql.connect(host='localhost', user='root',
+                                         password='qaz123', db='sakila',
+                                         charset='utf8mb4',
+                                         cursorclass=pymysql.cursors.DictCursor)
+
+            cursor = connection.cursor()
+            t=self.query.get()
+            cursor.execute(t)
+        except (pymysql.OperationalError):
+            errorMessage = "Error"
+            showerror("Error", errorMessage)
+            return
+
+        else:   #obtain user requested info
+            data = cursor.fetchall()
+            fields = cursor.description
+            cursor.close()
+            connection.close()
+
+        # clear results of last query
+        self.panes.destroy()
+        self.panes = Pmw.PanedWidget(self.frame.interior(),
+                                    orient = "horizontal")
+        self.panes.pack(expand = YES, fill = BOTH)
+
+        # create panel and label for each field
+        for item in fields:
+##            print(item)
+            self.panes.add(item[0])
+            label = Label(self.panes.pane(item[0]),
+                          text = item[0], relief = RAISED)
+            label.pack(fill = X)
+
+        # enter results into panes using labels
+        for entry in data:
+
+            for i in range(len(entry)):
+##                print(entry)
+                label = Label(self.panes.pane(fields[i][0]),
+                              text = entry[fields[i][0]], anchor = W, 
+                              relief = GROOVE, bg = "white")
+                label.pack(fill = X)
+
+            self.panes.setnaturalsize()
+
+
+def main():
+    QueryWindow().mainloop()
+
+main()
