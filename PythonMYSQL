@@ -1,0 +1,140 @@
+import pymysql
+import cgi
+
+connection = pymysql.connect(host='localhost', user='root',
+                             password='qaz123', db='banking',
+                             charset='utf8mb4',
+                             cursorclass=pymysql.cursors.DictCursor)
+
+cursor = connection.cursor()
+'''
+cursor.execute("SELECT VERSION()")
+
+data = cursor.fetchone()
+
+print ("Database version : {} ".format(data)) '''
+
+'''
+Queries :
+         1. Find all customers who have only one account at a specific branch.
+
+         2. Find all customers who have an account at the bank, but do not have any loan.
+
+         3. Find minimum, maximum, average, and total balance of a specific customer.
+
+         4. Find the details of the customer having loan in a specific bank.
+
+         5. Find the banks not having any branch at a specific location. 
+
+          Sample : select FirstName, LastName from Persons where city = 'kharagpur'
+'''
+##ques 1.
+sql1 = "Select * from customer where customer.branch_id=31 HAVING count(*)=1;"
+##ques 4.
+sql4 = "SELECT * from customer where customer_id in (SELECT DISTINCT(customer_id) from accounts where account_id in (SELECT DISTINCT(account_id) from loan where account_id in (SELECT DISTINCT(account_id) from accounts where branch_id in(SELECT DISTINCT(branch_id) from branch where bank_id in (select DISTINCT(bank_id) from bank where bank_name like 'A%')))));"
+##ques 3.
+sql3 = "SELECT MIN(BALANCE),MAX(BALANCE),AVG(BALANCE),SUM(BALANCE) from accounts where customer_id=(SELECT customer_id FROM customer where cutomer_name='Raju');"
+##ques 2.
+sql2 = "SELECT DISTINCT(customer_id) from customer where customer_id in(SELECT customer_id from accounts where account_id not in(SELECT account_id from loan));"
+##ques 5.
+sql5 = "SELECT * from bank where bank_id in (SELECT DISTINCT(bank_id) from branch where branch_id not in (SELECT branch_id from branch where(branch_name like 'K%')));"
+
+ch='y'
+while(ch=='y'):
+    print("Queries :")
+    print("1. Find all customers who have only one account at a specific branch.")
+    print("2. Find all customers who have an account at the bank, but do not have any loan.")
+    print("3. Find minimum, maximum, average, and total balance of a specific customer.")
+    print("4. Find the details of the customer having loan in a specific bank.")
+    print("5. Find the banks not having any branch at a specific location.")
+    ch=int(input("Enter your choice: "))
+    if(ch==1):
+        cursor.execute(sql1)
+        result = cursor.fetchall()
+        fields = cursor.description
+        ##print(reult)
+        j=1
+        for res in result:
+            for i in fields:
+                print(i[0],end=" ")
+                print(" "*(25-len(i[0])),end=" ")
+            print("\n")
+            for i in fields:
+                print(res[i[0]],end=' ')
+                print(" "*(25-len(str(res[i[0]]))),end=" ")
+            print("\n")
+            j=j+1
+    elif(ch==4):
+        cursor.execute(sql4)
+        result = cursor.fetchall()
+        fields = cursor.description
+        ##print(result)
+        j=1
+        for res in result:
+            for i in fields:
+                print(i[0],end=' ')
+                print(" "*(25-len(i[0])),end=" ")
+            print("\n")
+            for i in fields:
+                print(res[i[0]],end=' ')
+                print(" "*(25-len(str(res[i[0]]))),end=" ")
+            print("\n")
+            j=j+1
+    elif(ch==2):
+        cursor.execute(sql2)
+        result = cursor.fetchall()
+        fields = cursor.description
+        ##print(result)
+        j=1
+        for res in result:
+            for i in fields:
+                print(i[0],end=' ')
+                print(" "*(25-len(i[0])),end=" ")
+            print("\n")
+            for i in fields:
+                print(res[i[0]],end=' ')
+                print(" "*(25-len(str(res[i[0]]))),end=" ")
+            print("\n")
+            j=j+1
+    elif(ch==3):
+        cursor.execute(sql3)
+        result = cursor.fetchall()
+        fields = cursor.description
+        ##print(result)
+        j=1
+        for res in result:
+            for i in fields:
+                print(i[0],end=' ')
+                print(" "*(25-len(i[0])),end=" ")
+            print("\n")
+            for i in fields:
+                print(res[i[0]],end=' ')
+                print(" "*(25-len(str(res[i[0]]))),end=" ")
+            print("\n")
+            j=j+1
+    elif(ch==5):
+        cursor.execute(sql5)
+        result = cursor.fetchall()
+        fields = cursor.description
+        ##print(result)
+        j=1
+        for res in result:
+            for i in fields:
+                print(i[0],end=' ')
+                print(" "*(25-len(i[0])),end=" ")
+            print("\n")
+            for i in fields:
+                print(res[i[0]],end=' ')
+                print(" "*(25-len(str(res[i[0]]))),end=" ")
+            print("\n")
+            j=j+1
+    else:
+        print("Invalid Choice.")
+    ch=input("Enter y to continue or any other charecter to exit")
+##connection.commit()
+cursor.close()
+connection.close()
+        
+
+
+
