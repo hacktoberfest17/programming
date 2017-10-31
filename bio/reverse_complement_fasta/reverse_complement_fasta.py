@@ -9,6 +9,10 @@ def cli_parser():
     parser_main.add_argument("--reversefasta",
                              help="path to the filtered fasta",
                              required = True)
+    parser_main.add_argument("--rna",
+                             help="creates reverse complementary RNA instead of DNA",
+                             action = "store_true")
+
 
     args = parser_main.parse_args()
     return args
@@ -34,12 +38,7 @@ def complement_seq(seq, tdict):
         compl += tdict[c]
     return compl
 
-def translate_seq_dict(seq_dict):
-    tdict= { "A" : "T",
-             "T" : "A",
-             "G" : "C",
-             "C" : "G"
-           }
+def translate_seq_dict(seq_dict, tdict):
     tl_seq_dict = dict.fromkeys(seq_dict.keys())
     for key in tl_seq_dict.keys():
         tl_seq_dict[key] = complement_seq(seq=seq_dict[key], tdict=tdict)
@@ -55,7 +54,19 @@ def write_fasta(args, seq_dict):
 def main():
     args = cli_parser()
     sd = make_seq_dict(args)
-    td = translate_seq_dict(sd)
+    if args.rna:
+        tdict= { "A" : "T",
+                 "T" : "A",
+                 "G" : "C",
+                 "C" : "G"
+               }
+    else:
+        tdict= { "A" : "U",
+                 "T" : "A",
+                 "G" : "C",
+                 "C" : "G"
+               }
+    td = translate_seq_dict(sd,tdict)
     write_fasta(args, td)
 
 if __name__ == '__main__':
