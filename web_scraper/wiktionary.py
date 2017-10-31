@@ -18,18 +18,3 @@ def exists():
         sys.exit(0)
 
 exists()
-
-def definition():
-    url = r'http://en.wiktionary.org/w/index.php?title={}&action=raw'.format(word)
-    #url = r'htlps://en.wiktionary.org/w/index.php?title={}&format=json'.format(word)
-    #response = requests.get(url)
-    #data = response.json()
-    file = urlopen(url)
-    data = file.read()
-    file.close()
-    print(data)
-    #e = xml.etree.ElementTree.parse(data).getroot()
-    #for i in e.findall('Latin'):
-        #print(i.get('foobar'))
-
-definition()
