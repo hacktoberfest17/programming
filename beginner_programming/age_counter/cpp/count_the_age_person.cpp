@@ -24,8 +24,9 @@ int main()
 	
 	AgeYear=CurrentYear-BirthYear;
 	AgeMonth=CurrentMonth-BirthMonth;
-	
-	cout<<"\n\n\t\tYour Age is "<<AgeYear<<" Years And "<<AgeMonth<<" Months ";
-	
+	if(AgeMonth/10==0)
+		cout<<"\n\n\t\tYour Age is "<<AgeYear<<" Years And 0"<<AgeMonth<<" Months ";
+	else
+		cout<<"\n\n\t\tYour Age is "<<AgeYear<<" Years And "<<AgeMonth<<" Months ";
 	return 0;
 }
