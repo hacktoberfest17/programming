@@ -83,4 +83,4 @@ Don't forget to include the comments as seen above. Feel free to include additio
 
 ## Licensing
 
-This repo is licensed under GNU General Public License v3.0. See [LICENSE](https://github.com/hacktoberfest17/programming/blob/master/LICENSE) for the full license text.
+This repo is licensed under GNU General Public License v3.0. Click here to see the license: [LICENSE](https://github.com/hacktoberfest17/programming/blob/master/LICENSE) for the full license text.
