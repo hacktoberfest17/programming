@@ -82,6 +82,8 @@ $ttt = new TicTacToe();
 $player = 'X';
 while (!$ttt->isFinished()) {
     $ttt->printBoard();
+    echo "\033[7A";
+    usleep(300000);
     do {
         $row = random_int(0,2);
         $col = random_int(0,2);
