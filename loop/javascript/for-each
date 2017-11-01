@@ -1,0 +1,13 @@
+// forEach is used to loop through a collection of elements.
+
+const elements = [1, 2, 3];
+
+elements.forEach(element => {
+	console.log(element)
+	console.log('\n')
+})
+
+// output:
+// 1
+// 2
+// 3
