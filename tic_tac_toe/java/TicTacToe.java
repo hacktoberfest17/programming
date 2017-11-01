@@ -1,14 +1,14 @@
 
 public class TicTacToe {
 
-	public boolean hasWinner(char[][] board, char player) {
+	public boolean hasWinner(char[][] b, char player) {
 		// TODO Auto-generated method stub
-		for (int i = 0; i < board.length; i++) {
-			for (int j = 0; j < board[i].length; j++) {
+		for (int i = 0; i < b.length; i++) {
+			for (int j = 0; j < b[i].length; j++) {
 				boolean check = true;
-				if (board[i][j] == player) {
-					for (int row = 0; row < board.length; row++) {
-						if (board[i][row] != player) {
+				if (b[i][j] == player) {
+					for (int row = 0; row < b.length; row++) {
+						if (b[i][row] != player) {
 
 							check = false;
 						}
@@ -17,9 +17,9 @@ public class TicTacToe {
 						return check;
 					}
 					check = true;
-					for (int column = 0; column < board.length; column++) {
+					for (int column = 0; column < b.length; column++) {
 
-						if (board[column][j] != player) {
+						if (b[column][j] != player) {
 							check = false;
 						}
 					}
@@ -29,8 +29,8 @@ public class TicTacToe {
 
 					if (i == j) {
 						check = true;
-						for (int dia = 0; dia < board.length; dia++) {
-							if (board[dia][dia] != player) {
+						for (int dia = 0; dia < b.length; dia++) {
+							if (b[dia][dia] != player) {
 								check = false;
 							}
 						}
@@ -40,7 +40,7 @@ public class TicTacToe {
 					}
 					if ((i == 1 && j == 1) || (i == 2 && j == 0) || (i == 0 && j == 2)) {
 						check = true;
-						for (int dia = 0; dia < board.length; dia++) {
+						for (int dia = 0; dia < b.length; dia++) {
 							if (board[dia][2 - dia] != player) {
 								check = false;
 							}
