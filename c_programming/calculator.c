@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 
 void main(){
@@ -29,6 +30,9 @@ switch(op){
         break;
     case '%':
         printf("=%l\n", (long)num1%(long)num2);
+        break;
+    case '^':
+        printf("=%l\n",(long)pow(num1,num2));
         break;
     default: printf("Invalid Operator\n");
 }
