@@ -14,7 +14,7 @@ int main(){
     */
     execlp(s, s, (char *)NULL);
 
-    // The process would never reach this part if exec worked properly
+    /* The process would never reach this part if exec worked properly */
     printf("This line will be printed iff there was an error in exec\n");
     return 0;
 }
