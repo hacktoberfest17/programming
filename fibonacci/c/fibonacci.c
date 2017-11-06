@@ -14,12 +14,13 @@
         printf("Fibonacci Series: ");
 
 
-        for (i = 1; i <= n; ++i)  // loop for printing fibonacci series
+        for (i = 1; i < n; ++i)  // loop for printing fibonacci series
         {
             printf("%d, ", t1);
             nextTerm = t1 + t2;
             t1 = t2;
             t2 = nextTerm;
         }
+        printf("%d",t1);
         return 0;
     }
