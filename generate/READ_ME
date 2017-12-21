@@ -1,0 +1,6 @@
+This is a simple app that, based on user input, creates an array of random numbers.
+It then requests a second number from the user from a specific range (arraySize * 4).
+It will search the array for that number and return a notification of 
+success or failure.
+It then asks the user if they wish to see the array of random numbers and
+outputs the array if the user enters "Y" or "y".
