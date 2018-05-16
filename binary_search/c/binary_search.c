@@ -1,16 +1,16 @@
 #include<stdio.h>
 
-int binarySearch(int arr[], int l, int r, int x)
+int binarySearch(int arr[], int left, int right, int find)
 {
-   if (r >= l)
+   if (right >= left)
    {
-        int mid = l + (r - l)/2;
+        int mid = left + (right - left)/2;
  
-        if (arr[mid] == x)  return mid;
+        if (arr[mid] == find)  return mid;
  
-        if (arr[mid] > x) return binarySearch(arr, l, mid-1, x);
+        if (arr[mid] > find) return binarySearch(arr, left, mid-1, find);
  
-        return binarySearch(arr, mid+1, r, x);
+        return binarySearch(arr, mid+1, right, find);
    }
    return -1;
 }
