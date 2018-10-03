@@ -13,17 +13,16 @@ A month-long celebration from October 1st - 31st sponsored by [Digital Ocean](ht
 [https://hacktoberfest.digitalocean.com](https://hacktoberfest.digitalocean.com/)
 
 
-## How Contribute to This Project
+## How to Contribute to This Project
 Here are 3 quick and painless ways to contribute to this project:
 
 * Add a program in any language. (A simple Hello World would be suffice.)
 To do so, first create an issue with the task you are doing. For Ex. Issue - creating bubble sort in C. Add the HacktoberFest label in the issue and assign the issue to yourself. Create a pull request in response to that issue and finally submit it for review.
 
-* How to name your branch?
-	username_hello_world_in_c
+* Name your branch "username_hello_world_in_c"
 
 	Also create a directory for any new programs if it doesn't exist.
-	ex. hello_world, bubble_sort.
+	E.g. hello_world, bubble_sort.
 	Inside these directories you can create your own file with program_name.language_extension (hello_world.cpp)
 
 Finally, wait for it to be merged!
