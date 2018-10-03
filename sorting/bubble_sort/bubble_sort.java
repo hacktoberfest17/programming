@@ -1,18 +1,12 @@
 public static int [] bubbleSort(int [] array){
-    int lastPosition = array.length;
-    while(lastPosition > 0){
-        int position = 1;
-        while(position < lastPosition){
-        	if(array[position] < array[position-1]){
-                int temp = array[position];
-                array[position] = array[position-1];
-                array[position-1] = temp;
-             }
-                position++;
+    for (int x=0; x<array.length; x++) {
+        for(int y=x+1; y<array.length; y++) {
+            if(array[x]>array[y]) {
+                int temp = array[x];
+                array[x] = array[y];
+                array[y] = temp;
+            }
         }
-
-            lastPosition--;
     }
-
     return array;
 }
