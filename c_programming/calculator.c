@@ -21,11 +21,11 @@ switch(op){
         printf("=%lf\n", num1*num2);
         break;
     case '/':
-        if(num2==0){
+        if(num2==0)
             printf("Division by zero error!\n");
-        }else{
+        else
             printf("=%lf\n", num1/num2);
-        }
+        
         break;
     case '%':
         printf("=%l\n", (long)num1%(long)num2);
