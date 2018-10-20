@@ -1,0 +1,83 @@
+#include <stdio.h>
+#define MAX 20
+
+void BFS(int adj[][MAX],int start, int n)
+{
+  int queue[n],rear=-1,front=-1, i;
+  int visited[MAX] = {0};
+  queue[++rear] = start;
+  visited[start] = 1;
+  printf("\n\nBFS: \n");
+  while(rear != front)
+  { 
+    start = queue[++front]; 
+    printf("%d \t",start+1);
+    for(i=0; i<n; i++)
+    {
+      if(adj[start][i]==1 && visited[i]==0)
+      {
+        queue[++rear] = i;
+        visited[i] = 1;
+      }
+    }
+  }
+}
+
+void DFS(int adj[][MAX],int start, int n)
+{
+  int stack[n],top=-1, i;
+  int visited[MAX] = {0};
+  stack[++top] = start;
+  visited[start] = 1;
+  printf("\n\nDFS: \n");
+  while(top != -1)
+  { 
+    start = stack[top--]; 
+    printf("%d \t",start+1);
+    for(i=0; i<n; i++)
+    {
+      if(adj[start][i]==1 && visited[i]==0)
+      {
+        stack[++top] = i;
+        visited[i] = 1;
+      }
+    }
+  }
+}
+int main()
+{
+  int adj[MAX][MAX] = {0}, i, j, n, opt, opt1;  
+  do
+  {
+    printf("\nGraph Menu: \n1.Create a graph \n2.B.F.S \n3.D.F.S");
+    printf("\nEnter your choice: ");
+    scanf("%d", &opt1);
+    switch(opt1)
+    {
+      case 1:
+        printf("Enter the number of vertices in graph: ");
+        scanf("%d", &n);
+        printf("\nEnter the adjacency matrix: \n");
+        for(i = 0; i<n; i++)
+        {
+          for(j = 0; j<n; j++)
+          {
+            printf("Node from %d to %d? (1 for yes, 0 for no): ", i+1, j+1);
+            scanf("%d", &adj[i][j]);
+          }
+        }
+        break;
+      case 2:
+        BFS(adj, 0, n); 
+        break;
+      case 3:
+        DFS(adj, 0, n);
+        break;
+      default:
+        printf("\nEnter valid choice.");
+    }
+    printf("\nDo you want to continue? Press 1 to continue, 0 to exit: ");
+    scanf("%d", &opt);
+  }while(opt==1);
+  return 0;
+}
