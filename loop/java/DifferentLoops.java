@@ -49,3 +49,28 @@ public class DifferentLoops {
         System.out.println();
     }
 }
+
+## infinite loop program using while and for loop in Java
+
+ * Sample Class
+ */
+public class SampleClass {
+   
+    static void print(String value) {
+        System.out.println(value);
+    }
+   
+    public static void main(String[] args) {
+        while(true){
+            print("loading......");
+        }
+    }
+}
+
+
+
+
+
+
+
+
