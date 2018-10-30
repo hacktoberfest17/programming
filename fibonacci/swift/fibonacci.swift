@@ -35,6 +35,14 @@ class Fibonacci {
             return fibo
         }
     }
+
+    func recursive(_ num : Int) -> Int {
+        if num == 0 || num == 1 {
+            return 1
+        } else {
+            return self.recursive(num - 2) + self.recursive(num - 1)
+        }
+    }
 }
 
 print("Enter number of Fibonacci terms: ")
@@ -42,6 +50,7 @@ let input = Int(readLine()!)
 if let input = input {
     Fibonacci().printFirst(n: input)
     print("Nth Fibonacci number is \(Fibonacci().iterative(input) )")
+    print("Nth Fibonacci number (recursively) is \(Fibonacci().recursive(input) )")
 } else {
     print("Not a valid number")
 }
