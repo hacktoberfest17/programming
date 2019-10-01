@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">Fingerprint Auth</string>
+
+    <string name="main_activity_test">Testar autenticação</string>
+
+    <string name="dialog_fingerprint_title">Autenticação via Leitor de Digital</string>
+    <string name="dialog_fingerprint_content">Autentique com sua digital</string>
+    <string name="dialog_fingerprint_cancel">Cancelar</string>
+
+    <string name="fingerprint_error_no_permission">A permissão para o uso da impressão digital não está habilitada</string>
+    <string name="fingerprint_error_no_fingerprints">Cadastre pelo menos uma digital</string>
+
+</resources>

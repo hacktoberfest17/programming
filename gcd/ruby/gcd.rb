@@ -9,5 +9,8 @@ def gcd(a, b)
 end
 
 # verify it works
-puts(gcd(15, 25))
-puts(gcd(100, 10))
+unless ARGV[0] and ARGV[1]
+  puts "Please pass 2 numbers as arguments, i.e. ./gcd.rb 14 28"
+else
+  puts gcd((ARGV[0]).to_i, (ARGV[1]).to_i)
+end

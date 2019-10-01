@@ -1,0 +1,239 @@
+/* Tic Tac Toe game in JavaScript with two different levels
+   Author: Bharath Kumar
+   Github: https://github.com/iambk */
+
+body{
+	background-color: mediumorchid;
+	font-family: Helvetica;
+}
+
+body h1{
+	text-align: center;
+	margin-top: 2%;
+	font-size: 3em;
+}
+
+.container{
+	position: relative;
+	background-color: silver;
+	margin: 2% auto auto auto;
+	width: 400px;
+	height: 470px;
+	border: 2px solid silver;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.68);
+}
+
+#levels{
+	position: absolute;
+	top: 1%;
+	left: 1%;
+}
+
+#ai{
+	position: absolute;
+	top: 1%;
+	left: 28%;
+	font-size: 1.4em;
+}
+
+#playAs{
+	position: absolute;
+	top: 1%;
+	right: 1%;
+}
+
+.bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
+  position: absolute;
+  display: inline-block;
+  left: 1px;
+  margin-top: 5px;
+}
+
+.bootstrap-select .btn:focus{
+	outline: none !important;
+}
+
+#scoreboard{
+	position: absolute;
+	top: 12%;
+	left: 16%;
+	width: 70%;
+	height: 40px;
+}
+
+#X,#O{
+	position: absolute;
+	background-color: lightcoral;
+	width: 45%;
+	height: 100%;
+	border: 1px solid lightslategrey;
+	border-radius: 5px;
+	text-align: left;
+	padding-left: 15px;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+#X{
+	margin-left: 2%;
+}
+
+#O{
+	margin-left: 50%;
+}
+
+input{
+	position: absolute;
+	margin-top: 2%;
+	right: 10%;
+	width: 40px;
+	height: 85%;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+	-webkit-appearance: none;
+}
+
+#Xturn,#Oturn{
+	position: absolute;
+	width: 120px;
+	top: 24%;
+	text-align: center;
+	font-size: 1.8em;
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	border: 2px solid;
+}
+
+#Xturn{
+	left: 5%;
+}
+
+#Oturn{
+	right: 5%;
+}
+
+#reset{
+	position: absolute;
+	top: 24%;
+	left: 42%;
+	color: white;
+}
+
+button:focus{
+	outline: none !important;
+}
+
+button:active{
+	transform: translateY(1.5px);
+}
+
+#tictactoe{
+	position: absolute;
+	background-color: mediumseagreen;
+	top: 33%;
+	left: 0%;
+	width: 100%;
+	height: 310px;
+	border: 2px solid mediumseagreen;
+	border-radius: 5px;
+	border-color: mediumseagreen;
+	box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.68);
+}
+
+#result{
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	font-size: 4em;
+	font-weight: bold;
+}
+
+table{
+	position: absolute;
+	border-collapse: collapse;
+	border-style: hidden;
+	top: 5%;
+	left: 20%;
+}
+
+td{
+   border: 5px solid rgba(0,0,0,0.31);
+   width: 80px; 
+   height: 90px;
+   text-align: center;
+  	font-size: 3.5em;
+  	font-weight: bold;
+  	cursor: pointer;
+  	cursor: hand;
+}
+
+footer{
+	margin-top: 3%;
+	text-align: center;
+	color: black;
+}
+
+a{
+	color: darkblue;
+}
+
+a:hover,
+a:focus,
+a:active{
+	text-decoration: none !important;
+	outline: 0 !important;
+}
+
+/* ---Classes for jquery implementation--- */
+
+.hide{
+	display: none;
+}
+
+.shadow{
+	box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.68);
+}
+
+.color{
+	background-color: rgba(0,0,255,0.4);
+}
+
+@media only screen and (max-width: 768px){
+  
+  .container{
+    width: 350px;
+    height: 450px;
+  }
+  
+  #tictactoe{
+    height: 298px;
+  }
+  
+  table{
+    top: 6%;
+    left: 20%;
+  }
+  
+  td{
+   border: 3px solid rgba(0,0,0,0.31);
+    font-size: 3.2em;
+    width: 75px;
+    height: 85px;
+  }
+  
+  #Xturn{
+    left: 1%;
+  }
+
+  #Oturn{
+    right: 1%;
+  }
+}

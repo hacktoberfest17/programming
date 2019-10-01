@@ -1,0 +1,89 @@
+<!-- Tic Tac Toe game in JavaScript with two different levels
+     Author: Bharath Kumar
+     Github: https://github.com/iambk -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe</title>
+	<meta lang="en" charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="tictactoe.css">
+	<script type="text/javascript" src="tictactoe.js"></script>
+</head>
+<body>
+
+	<h1>Tic Tac Toe</h1>
+
+	<div class="container">
+		
+		<div id="levels">
+			<select class="selectpicker show-tick" title="Levels" data-width="fit" id="levelSelect">
+			  <option value="noob"> Noob </option>
+			  <option value="pro"> Pro </option>
+			  <option value="friend"> Play against a friend </option>
+			</select>
+		</div>
+
+		<div id="ai" class="hide"> <i class="fa fa-spinner fa-spin fa-2x"></i>Ai isThinking... </div>
+
+		<div id="playAs">
+			<select class="selectpicker show-tick" data-width="100px" id="playerSelect">
+				<option value="X"> X </option>
+				<option value="O"> O </option>
+			</select>
+		</div>
+
+		<div id="scoreboard">
+			<span id="X" class="shadow"> X <input type="number" value="0" disabled="true"> </span>
+			<span id="O" class="shadow"> O <input type="number" value="0" disabled="true"> </span>
+		</div>
+
+		<div id="Xturn" class="hide"> X's turn </div>
+
+		<button id="reset" class="btn btn-danger">Reset</button>
+
+		<div id="Oturn" class="hide"> O's turn </div>
+
+		<div id="tictactoe">
+
+			<div id="result" class="hide"></div>
+
+			<table>
+				<tr>
+					<td id="0"></td>
+					<td id="1"></td>
+					<td id="2"></td>
+				</tr>
+
+				<tr>
+					<td id="3"></td>
+					<td id="4"></td>
+					<td id="5"></td>
+				</tr>
+
+				<tr>
+					<td id="6"></td>
+					<td id="7"></td>
+					<td id="8"></td>
+				</tr>
+			</table>
+
+		</div>
+
+	</div>
+
+	<footer>
+		<h3>Coded by<a href="https://www.freecodecamp.com/iambk" target="_blank"> Bharath Kumar</a>.</h3>
+	</footer>
+
+</body>
+</html> 
