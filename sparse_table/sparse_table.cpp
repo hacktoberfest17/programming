@@ -14,10 +14,12 @@ using namespace std;
 #define LOGN 20
 
 int a[MAXN];
-int table[LOGN][MAXN];
 
 struct sparse_table
 {
+    
+    int table[LOGN][MAXN];
+    
     void build(int n){
 
         for (int i = 1; i <= n;i++)
