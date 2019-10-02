@@ -4,12 +4,11 @@ import java.util.Scanner;
  */
 public class Factorial {
     public static  int fac(int number){
-        int r;
         if(number == 1){
             return 1;
         }
-        r = fac(number - 1)*number;
-        return r;
+        return ( fac(number - 1)*number);
+        
    }
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
