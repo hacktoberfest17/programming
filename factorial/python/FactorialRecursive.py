@@ -4,4 +4,4 @@ def factorial(n):
     return n * factorial(n-1)
 
 n = int(input("Number: "))
-print(factorial(n))
+print("Factorial of {}: {}".format(n, factorial(n)))
