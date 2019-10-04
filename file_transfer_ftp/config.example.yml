@@ -1,0 +1,6 @@
+---
+    host: '127.0.0.1'
+    port: 22
+    user: 'dev'
+    password: '123456'
+    destination: '/home/dev'
