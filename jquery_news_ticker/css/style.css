@@ -1,0 +1,41 @@
+.news-box {
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    height: 40px;
+    width: 90%;
+    border: 3px solid #f00;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #f75;
+  }
+  
+  .current {
+    position: relative;
+    top: -30px;
+    left: -10px;
+    background-color: #d00;
+    width: 120px;
+    height: 70px;
+    z-index: 100;
+  }
+  
+  .tag-line {
+    position: relative;
+    top: 20px;
+    left: 5px;
+    font-size: 1.2em;
+  }
+  
+  .news {
+    
+  }
+   
+  .ticker {
+    visibility: hidden;
+    position: absolute;
+    top: 25%;
+    right: -1000px;
+    width: 100%;
+  }
+  
