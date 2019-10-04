@@ -9,7 +9,7 @@ setup(
     license='GPLV3',
     packages=find_packages(),
     install_requires=[
-        'paramiko==2.2.1',
+        'paramiko==2.2.4',
         'PyYAML==3.12',
     ],
 )
