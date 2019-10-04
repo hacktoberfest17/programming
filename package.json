@@ -20,6 +20,7 @@
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^8.0.37",
+    "readline-sync": "^1.4.7",
     "ts-node": "^3.3.0",
     "typescript": "^2.5.3"
   }
