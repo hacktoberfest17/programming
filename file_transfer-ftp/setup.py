@@ -10,6 +10,6 @@ setup(
     packages=find_packages(),
     install_requires=[
         'paramiko==2.2.1',
-        'PyYAML==3.12',
+        'PyYAML==5.1',
     ],
 )
