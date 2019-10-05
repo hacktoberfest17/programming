@@ -1,0 +1,2 @@
+
+The maximum sum segment problem is the task of finding a subvector with the largest sum possible. For example, for the following sequence of values ??-2.1, -3.4, -1.2.1, -5.4; the maximum sum segment is 4, -1,2,1 with sum 6. The trivial algorithm would be this:
