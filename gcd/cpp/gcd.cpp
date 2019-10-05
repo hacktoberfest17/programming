@@ -1,18 +1,9 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
+using namespace std;
 // Iterative gcd function
 int gcd(int m, int n)
 {
-    if(!(m && n))
-        return 0;
-    
-    while(true)
-    {
-        if((m = m % n) == 0)
-            return n;
-        else if((n = n % m) == 0)
-            return m;
-    }
+    return __gcd(m,n);
 }
 
 
