@@ -3,13 +3,15 @@ import java.util.Scanner;
  * Created by buddhimah on 10/16/2017.
  */
 public class Factorial {
+    int result[10000];
     public static  int fac(int number){
-        int r;
-        if(number == 1){
-            return 1;
+        if (number >= 0) {
+          result[0] = 1;
+          for (int i = 1; i <= n; ++i) {
+             result[i] = i * result[i - 1];
+          }
+          return result[n];
         }
-        r = fac(number - 1)*number;
-        return r;
    }
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
