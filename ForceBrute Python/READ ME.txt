@@ -1,0 +1,3 @@
+
+Simple program simulating a brute force attack 
+to get password already set previously.
