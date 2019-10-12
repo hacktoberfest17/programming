@@ -1,0 +1,203 @@
+#include <stdlib.h>
+#include <stdio.h>
+#define true 1
+#define false 0
+#define PREFERENCIALAGE 60
+
+typedef int bool;
+
+typedef struct aux {
+  int id;
+  int idade;
+  struct aux* prox;
+} ELEMENTO, * PONT;
+
+typedef struct {
+  PONT inicio;
+  PONT fimPref;
+  PONT inicioNaoPref;
+  PONT fim;
+} FILAPREFERENCIAL, * PFILA;
+
+PFILA createQueue(){
+	PFILA res = (PFILA) malloc(sizeof(FILAPREFERENCIAL));
+	res->inicio = NULL;
+	res->fimPref = NULL;
+	res->inicioNaoPref = NULL;
+	res->fim = NULL;
+	return res;
+}
+
+int size(PFILA f){
+	PONT atual = f->inicio;
+	int tam = 0;
+	while (atual) {
+		atual = atual->prox;
+		tam++;
+	}
+	return tam;
+}
+
+PONT searchID(PFILA f, int id){
+	PONT atual = f->inicio;
+	 while (atual) {
+		if (atual->id == id) return atual;
+		atual = atual->prox;
+	}
+	return NULL;
+}
+
+void showLog(PFILA f){
+	int numElementos = tamanho(f);
+	printf("\nLog fila [elementos: %i] - Inicio:", numElementos);
+	PONT atual = f->inicio;
+	while (atual){
+		printf(" [%i;%i]", atual->id, atual->idade);
+		atual = atual->prox;
+	}
+	printf("\n\n");
+}
+
+int consultAge(PFILA f, int id){
+	PONT atual = f->inicio;
+	 while (atual) {
+		if (atual->id == id) return atual->idade;
+		atual = atual->prox;
+	}
+	return -1;
+}
+
+bool insertPersonQueue(PFILA f, int id, int idade){
+	PONT novo = (PONT)malloc(sizeof(ELEMENTO));
+	novo->id = id;
+	novo->idade = idade;
+	novo->prox = NULL;
+	if (novo->id < 0 || novo->idade < 0) return false; //Verifica se a idade eh invalida
+	PONT atual = f->inicio;
+	if (f->inicio){
+	if (buscarID(f, id))return false; //Verifica se o id ja esta na lista
+	}
+	if (novo->idade >= PREFERENCIALAGE){ //Preferencial
+		if (f->inicio == NULL){ //Ninguem na fila
+			f->inicio = novo;
+			f->fimPref = novo;
+			f->fim = novo;
+			return true;
+		}
+		else if (f->inicio != NULL && f->fimPref != NULL){ //Fila com preferenciais
+			novo->prox = f->fimPref->prox;
+			f->fimPref->prox = novo;
+			f->fimPref = novo;
+			if (f->inicioNaoPref == NULL){ //Fila composta apenas por preferenciais
+				f->fim = novo;
+				return true;
+			}
+		}
+		else if (f->inicio != NULL && f->fimPref == NULL){ //Fila preenchida mas sem preferenciais
+			novo->prox = f->inicio;
+			f->inicio = novo;
+			f->fimPref = novo;
+			return true;
+		}
+	}
+	else { //Nao preferencial
+		if (f->inicio == NULL){ //Ninguem na fila
+			f->inicio = novo;
+			f->inicioNaoPref = novo;
+			f->fim = novo;
+			return true;
+		}
+		else if (f->inicio != NULL && f->fimPref == NULL){ //Fila sem preferenciais
+			f->fim->prox = novo;
+			f->fim = novo;
+			return true;
+		}
+		else if (f->inicio != NULL && f->fimPref != NULL){ //Fila com preferenciais
+			if (f->inicioNaoPref == NULL){ //Fila apenas com preferenciais
+				f->fimPref->prox = novo;
+				f->inicioNaoPref = novo;
+				f->fim = novo;
+				return true;	
+			}
+			else if (f->inicioNaoPref != NULL){ //Fila com preferenciais e nao preferenciais (ou apenas nao preferenciais)
+				f->fim->prox = novo;
+				f->fim = novo;
+				return true;
+			}
+		}
+	}	
+}
+
+bool answerFirstPersonInQueue(PFILA f, int* id){
+	if (f->inicio == NULL) return false; //Verifica se a fila esta vazia
+	PONT apagar = f->inicio;
+	*id = f->inicio->id;
+	if (f->fimPref != NULL){ //Inicio eh preferencial
+		if (f->inicio == apagar && f->fimPref == apagar){ //Verifica se o elemento eh o ultimo preferencial e se o seu proximo eh preferencial (se houver)
+		f->fimPref = NULL;
+		f->inicio = f->inicioNaoPref;
+		}
+		else f->inicio = f->inicio->prox;
+	}
+	else{ //Inicio nao eh preferencial
+		f->inicioNaoPref = f->inicioNaoPref->prox;
+		f->inicio = f->inicioNaoPref;
+	}
+	free(apagar);
+	if (f->inicio == NULL){ //Fila ficou vazia apos o atendimento
+		f->inicioNaoPref = NULL; 
+		f->fim = NULL; 
+		f->fimPref = NULL; 
+	}
+	return true;
+}
+
+PONT searchPrevious(PFILA f, int id){ //Funcao de busca auxiliar que retorna o elemento anterior do elemento representado pelo ID
+	PONT anterior = f->inicio;
+	 while (anterior) {
+		if(anterior->prox->id == id) return anterior;
+		anterior = anterior->prox;
+	}
+	return NULL;
+}
+
+bool giveUpQueue(PFILA f, int id){
+	PONT apagar = searchID(f, id);
+	if (!apagar) return false;
+	if (f->inicio == apagar && f->fim == apagar){ //Unica pessoa da fila
+		f->inicioNaoPref = NULL;
+		f->fim = NULL;
+		f->fimPref = NULL;
+		f->inicio = NULL;
+	}
+	else if (f->inicio == apagar && f->fimPref == apagar){ //Desistencia do primeiro da fila preferencial e seu proximo podendo ser nao preferencial
+		f->inicio = f->inicioNaoPref;
+		f->fimPref = NULL;
+	}
+	else if (f->inicio == apagar && apagar->prox != NULL){ //Desistencia do primeiro da fila existindo um proximo
+			if(apagar == f->inicioNaoPref){ //Verifica se o elemento eh o primeiro da fila nao preferencial
+			f->inicioNaoPref = apagar->prox;
+			}
+		f->inicio = apagar->prox;
+	}
+	else if (apagar == f->fim){ //Desistencia do ultimo da fila;
+		PONT anterior = searchPrevious(f, id);
+		f->fim = anterior;
+		f->fim->prox = NULL;
+			if(apagar == f->inicioNaoPref){ //Verifica se o elemento eh o primeiro da fila nao preferencial
+			f->inicioNaoPref = NULL;
+			}
+	}
+	else if (apagar != f->inicio || apagar != f->fim || apagar != f->fimPref){ //Desistencia
+			if(apagar == f->inicioNaoPref){ //Verifica se o elemento eh o primeiro da fila nao preferencial para ajustar seu proximo
+			f->inicioNaoPref = apagar->prox;
+		}
+		PONT anterior = searchPrevious(f, id);
+		anterior->prox = apagar->prox;
+		if(apagar == f->fimPref){ //Verifica se o elemento a ser apagado eh o ultimo preferencial
+			f->fimPref = anterior;
+		}
+	}
+	free(apagar);
+	return true;
+}
