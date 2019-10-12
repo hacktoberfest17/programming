@@ -1,0 +1,59 @@
+import java.util.Scanner;
+ 
+public class Main {
+ 
+  public static void main(String[] args) {
+ 
+    Scanner entrada = new Scanner(System.in);  
+       int m = entrada.nextInt();  
+       int n = entrada.nextInt();  
+       
+       if ( m <= 1 && n <= 1) {
+ 
+          int primos = 0;  // Corrige os negativos
+           System.out.println (primos); }   
+       
+      else {
+         
+         if ( m <= 1) {
+          m = 2; // Corrige para que o numero 1 não seja contado;
+         }
+ 
+         if ( n <= 1) {
+ 
+          n = 2; // Corrige para que o numero 1 não seja contado;
+         }
+ 
+         if (m > n) {
+ 
+         int maior = m;
+          m = n; // Caso o numero maior seja digitado primeiro, restabelece a ordem;
+          n = maior;
+       }
+ 
+      int divisor = 0;
+      int resto = 0;
+      int primos = 0;
+      int q = m;
+ 
+       for (m = q; m <= n; m++){
+ 
+        divisor = 0;
+        resto = 0;  // zera os contadores para cada numero de m até n;
+ 
+        for (int i = 2; i < m; i++) {
+ 
+         divisor++; // Conta quantas divisões foram feitas
+ 
+         if (m % i != 0) {
+            resto++; // Conta quantas divisões obtiveram restos diferentes de 0
+ 
+            }
+         }
+         if ( divisor == resto) { primos++; } // Caso todas as divisões tenham dado resto diferente de zero aqui se contabiliza um numero primo.
+       }
+ 
+  System.out.println (primos);
+    }      
+  }
+}
