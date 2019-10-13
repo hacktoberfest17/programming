@@ -3,8 +3,10 @@ import java.util.Scanner;
 class Fibonacci {
   public static void main(String[] args) {
     System.out.print("Enter the number of terms: ");
-    Scanner scan = new Scanner(System.in);
-    long num = scan.nextLong();
+    InputStreamReader reader = new InputStreamReader(System.in);
+    BufferedReader br = new BufferedReader(reader);
+    String num = Long.parseLong();
+   
     printFibonacciSeries(num);
   }
 
