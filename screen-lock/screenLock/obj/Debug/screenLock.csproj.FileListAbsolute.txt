@@ -1,0 +1,17 @@
+D:\projects\cSharp\lockScreen\screenLock\screenLock\bin\Debug\screenLock.exe.config
+D:\projects\cSharp\lockScreen\screenLock\screenLock\bin\Debug\screenLock.exe
+D:\projects\cSharp\lockScreen\screenLock\screenLock\bin\Debug\screenLock.pdb
+D:\projects\cSharp\lockScreen\screenLock\screenLock\obj\Debug\screenLock.csprojAssemblyReference.cache
+D:\projects\cSharp\lockScreen\screenLock\screenLock\obj\Debug\MainWindow.g.cs
+D:\projects\cSharp\lockScreen\screenLock\screenLock\obj\Debug\App.g.cs
+D:\projects\cSharp\lockScreen\screenLock\screenLock\obj\Debug\screenLock_MarkupCompile.cache
+D:\projects\cSharp\lockScreen\screenLock\screenLock\obj\Debug\screenLock_MarkupCompile.lref
+D:\projects\cSharp\lockScreen\screenLock\screenLock\obj\Debug\MainWindow.baml
+D:\projects\cSharp\lockScreen\screenLock\screenLock\obj\Debug\screenLock.g.resources
+D:\projects\cSharp\lockScreen\screenLock\screenLock\obj\Debug\screenLock.Properties.Resources.resources
+D:\projects\cSharp\lockScreen\screenLock\screenLock\obj\Debug\screenLock.csproj.GenerateResource.cache
+D:\projects\cSharp\lockScreen\screenLock\screenLock\obj\Debug\screenLock.csproj.CoreCompileInputs.cache
+D:\projects\cSharp\lockScreen\screenLock\screenLock\obj\Debug\screenLock.exe
+D:\projects\cSharp\lockScreen\screenLock\screenLock\obj\Debug\screenLock.pdb
+D:\projects\cSharp\lockScreen\screenLock\screenLock\obj\Debug\LockWindow.g.cs
+D:\projects\cSharp\lockScreen\screenLock\screenLock\obj\Debug\LockWindow.baml

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "screenLock", "screenLock\screenLock.csproj", "{EA05B4A4-F8C6-443A-BF9E-173BB21FF3B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		ScreenLock-b0.1|Any CPU = ScreenLock-b0.1|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA05B4A4-F8C6-443A-BF9E-173BB21FF3B7}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{EA05B4A4-F8C6-443A-BF9E-173BB21FF3B7}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{EA05B4A4-F8C6-443A-BF9E-173BB21FF3B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA05B4A4-F8C6-443A-BF9E-173BB21FF3B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA05B4A4-F8C6-443A-BF9E-173BB21FF3B7}.ScreenLock-b0.1|Any CPU.ActiveCfg = ScreenLock-b0.1|Any CPU
+		{EA05B4A4-F8C6-443A-BF9E-173BB21FF3B7}.ScreenLock-b0.1|Any CPU.Build.0 = ScreenLock-b0.1|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {054AFDC4-B215-437B-B7B5-3D64B8F34048}
+	EndGlobalSection
+EndGlobal
