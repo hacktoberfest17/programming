@@ -1,3 +1,5 @@
 function rev(str){
-	return str.split('').reverse().join('');
+	const ReverseString = str => [...str].reverse().join(''); 
+  
+         document.write(ReverseString("Hello")) 
 }
