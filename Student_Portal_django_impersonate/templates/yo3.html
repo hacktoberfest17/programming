@@ -1,0 +1,5 @@
+<h2>are u sure to delete {{ object.name }}??</h2>
+<form method="post">
+    {%  csrf_token %}
+    <input type="submit" value="yes"><input type="submit" value="No">
+</form>
