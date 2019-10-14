@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+
+    {% if user.is_impersonate %} <a style="margin-left: 1000px;margin-top: 4px" href="{% url 'impersonate-stop' %}">Stop Impersonation mode</a><h2 style="color: green;">Impersonation Mode by {{ request.real_user }} </h2> You are Impersonating <b>{{ request.user }} </b>{% endif %}
+
+
+    {% if user.is_superuser %} <h3> Welcome SuperUser </h3>
+
+
+      <div style=""> <a href="{% url 'impersonate-search' %}">Search User Here</a></div>
+
+        <div> </div>
+
+
+    {% endif %}
+
+
+
+{#    <a href=" {% url 'std:add' %}"> Here </a>#}
+
+
+{# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;v &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;v#}
+
+    {% if user.is_superuser %}
+
+        <a style="margin-left: 1000px;margin-top: 4px" href="{% url 'logout' %}">Logout</a>
+
+        <div style="margin-left: 400px; background-color: beige; margin-right: 320px" >
+
+        <h2 style="color: firebrick; margin-left: 25%;">Welcome To Admin Panel</h2>
+
+        <h3 style="margin-left: 30%"><a href=" {% url 'std:add' %}">Add New Student Details</a></h3>
+
+    <table border="1">
+
+
+
+    <th> Name</th><th>Age</th><th>College</th>
+{#        {% if not user.is_superuser %}#}
+        <th>Edit</th><th>Delete</th>
+{#        {% endif %}#}
+{#    {% if user.is_superuser %}#}
+        <th>Impersonate</th>
+{#        {% endif %}#}
+    {% for i in obj %}
+
+        <tr><td>{{ i.name}}</td>
+            <td>{{ i.age }}</td>
+            <td>{{ i.college }}</td>
+{#        {% if not user.is_superuser %}#}
+            <td><a href="{% url 'std:update' i.pk %}">Edit</a></td>
+            <td><a href="{% url 'std:dlete' i.pk %}">Delete</a></td>
+{#        {% endif %}#}
+{#            {% if user.is_superuser %}#}
+            <td><a href="http://127.0.0.1:8000/impersonate/{{ i.User_id_id }}">Impersonate {{ i.name }}</a> </td>
+{#        {% endif %}#}
+        </tr>
+    {%  endfor %}
+    </table>
+
+</div>
+        {% endif %}
+
+{#    <a href=""#}
+
+    {% if not user.is_superuser %}
+
+        <a style="margin-left: 1000px;margin-top: 4px" href="{% url 'logout' %}">Logout</a>
+
+
+  <h2><div style="color: maroon"> Welcome {{ user.username }}</div></h2>
+
+
+
+        <div style="margin-left: 500px;  margin-right:500px; background-color: gainsboro">
+  <h2 style="color: midnightblue" align="center">User Dashboard</h2>
+
+
+        <table align="center">
+<tr>
+     <td>Username </td><td><b>:</b></td><td> {{ User.User_id }} </td>
+</tr>
+            <tr>
+    <td> Name </td><td><b>:</b></td><td> {{ User.name }} </td>
+            </tr>
+            <tr>
+        <td>Age </td><td><b>:</b></td><td> {{ User.age }} </td>
+            </tr>
+            <tr>
+        <td>College</td><td><b>:</b></td><td>{{ User.college }}</td>
+{#        <td>Username </td><td><b>:</b></td><td> {{ User.User_id }} </td>#}
+
+
+
+
+        </tr>
+        </table>
+        <br/>
+        <br/>
+
+         <div align="center"><a href="{% url 'std:update' User.pk %}">Update Your Profile</a></div>
+
+
+        </div>
+
+{#        Hyy#}
+        {% endif %}
+
+
+{#{%  endblock #}
+
+</body>
+</html>

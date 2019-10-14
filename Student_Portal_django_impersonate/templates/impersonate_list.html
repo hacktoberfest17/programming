@@ -1,0 +1,4 @@
+{% for i in users %}
+{#    {{ i.redirect_field }}#}
+    <a href="{% url 'impersonate-start' i.pk %}{{redirect}}">{{ i }}</a><br/>
+{% endfor %}
