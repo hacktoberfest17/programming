@@ -1,22 +1,24 @@
 public class greater{
-public static void main(String[] args){
+    public static void main(String[] args){
         try{
-        if(args.length!=2){
-                System.out.println("You have to type in just 2 Numbers.");
-        }
-        else{
-                if(Integer.parseInt(args[0])>Integer.parseInt(args[1]))
-                {
-                        System.out.println(args[0] + " is greater then " + args[1]);
+            if(args.length<=1){
+                System.out.println("You have to type in 2 or more numbers.");
+            }
+            else{
+                int greater = 0;
+                for(int i=0; i<args.length; i++) {
+                    int a = Integer.parseInt(args[i]);
+                    if (a > greater)
+                    {
+                        greater = a;
+                    }
                 }
-                else{
-                        System.out.println(args[1] + " is greater then " + args[0]);
-                }
-        }
+                System.out.println("The Greatest number is: " + greater);
+            }
         }
         catch(NumberFormatException e)
         {
-                System.out.println("You have to type in 2 >Numbers<");
+            System.out.println("You have to type in 2 or more >numbers<");
         }
-}
+    }
 }
