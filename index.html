@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>programming | A repo for first time contributors</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .header {
+            font-weight: 300;
+        }
+
+        .page_header {
+            height: 20rem;
+        }
+
+        @media only screen and (max-width: 400px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+            h5 {
+                font-size: 1rem;
+            }
+            .page_header {
+                height: 15rem;
+            }
+        }
+
+        @media only screen and (min-width: 400px) and (max-width: 600px) {
+            .page_header {
+                height: 25rem;
+            }
+        }
+
+        .margin-top-20 {
+            margin-top: 20px
+        }
+        /*footer*/
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="had-container page_header  purple darken-2  white-text valign-wrapper">
+        <div class="row ">
+            <div class="col s12 m12 l12 center-align">
+                <h1 class="project-name header">programming</h1>
+                <h5 class="project-tagline  light purple-text text-lighten-4">Celebrate HacktoberFest with your first contribution</h5>
+                <a href="https://github.com/hacktoberfest17/programming" target="_blank" class="waves-effect waves-light btn   white purple-text margin-top-20">Start Coding</a>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <h1 class="purple-text header">Contributors</h1>
+        </div>
+        <div class="row" id="contributor_list">
+            
+        </div>
+    </div>
+
+    <footer class="page-footer purple darken-3">
+        <div class="footer-copyright">
+            <div class="container">
+                <!--© 2014 Copyright Text
+            <a class=" grey-text text-lighten-4 right" href="#!">More Links</a>-->
+            </div>
+        </div>
+    </footer>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+        function getContribList(current_page, final_page) {
+            $.getJSON("https://api.github.com/repos/hacktoberfest17/programming/contributors?page=" + current_page, function(data, textStatus, xhr) {
+                //console.log(data);
+                populateList(data);
+
+                if (current_page == 1) {
+                    const regex = /(page=)([0-9]*)/gi;
+                    var str = xhr.getResponseHeader("Link").split(",")[1]
+                    m = regex.exec(str)
+                    final_page = m[2];
+                }
+                current_page += 1;
+                if (current_page > final_page)
+                    return true;
+                else
+                    return getContribList(current_page, final_page);
+
+            });
+        }
+        getContribList(1, 2);
+
+        function populateList(data) {
+            var elems = ""; 
+            data.forEach(function(item) {
+                //console.log(item);
+                elems+='<div class="col s12 m4"><div class="card small"><div class="card-image"><img src=\"'+item['avatar_url']+'\"><span class="card-title">'+item["login"]+'</span></div><div class="card-content"><p>#'+item["contributions"]+' contributions</p></div><div class="card-action"><a target="_blank" class="purple-text" href="'+item["html_url"]+'">My Profile</a></div></div></div>';
+            });
+            $("#contributor_list").append(elems);
+            
+        }
+    </script>
+</body>
+
+</html>
