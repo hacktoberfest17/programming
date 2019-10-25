@@ -48,3 +48,5 @@ int main()
     bfsMain(src,v);
     return 0;
 }
+
+beautiful code, would recursion be better? 
