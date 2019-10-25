@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+void main()
+{
+long n,j,p=0,q;
+clrscr();
+printf("\n Enter the number of rows : ");
+scanf("%ld",&n);
+for(j=0;j<=n-1;j++)
+{
+p=1*pow(10,j)+p;
+q=p*p;
+printf("%ld",q);
+printf("\n");
+}
+getch();
+}
