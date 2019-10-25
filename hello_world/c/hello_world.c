@@ -6,6 +6,7 @@ int main(void)
 {
    // printf() displays the string inside quotation
    puts("Hello, World!");
+   puts("Happy World!");
    getch();
 
    return 0; /* Exit the program with return code 0 (success) */
