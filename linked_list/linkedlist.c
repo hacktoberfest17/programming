@@ -4,7 +4,7 @@
 
 typedef struct node
 {
-    int pid;
+    int data;
     struct node* next;
 }node;
 
@@ -21,11 +21,11 @@ void createlinkedlist(int n)
     int i;
     for(i = 0; i < n; i++)
     {
-        node* newnode = malloc(sizeof(node));
+        struct node* newnode =(struct node*)malloc(sizeof(node));
         if(head == NULL)
         {
 
-            newnode->pid = i;
+            newnode->data = i;
             newnode->next = NULL;
             head = newnode;
         }
@@ -39,7 +39,7 @@ void createlinkedlist(int n)
                 temp = temp->next;
             }
             curr->next = newnode;
-            newnode->pid = i;
+            newnode->data = i;
             newnode->next = NULL;
         }
 
@@ -48,7 +48,7 @@ void createlinkedlist(int n)
     node* temp = head;
     while(temp != NULL)
     {
-        printf("%d\n",temp->pid);
+        printf("%d\n",temp->data);
         temp = temp->next;
     }
 
