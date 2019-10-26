@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.curve.nandhakishore.deltathree.PokeDexHome">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2196F3"
+        app:titleTextColor="@android:color/white"
+        android:id="@+id/tBar">
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:hint="Search for Pokemon"
+            android:inputType="text"
+            android:layout_marginEnd="4dp"
+            android:id="@+id/pokeName"
+            android:imeOptions="actionSearch" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:id="@+id/search_button" />
+
+    </LinearLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cv"
+            android:visibility="gone"
+            android:layout_gravity="top"
+            app:cardCornerRadius="4dp">
+
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="30dp"
+                android:layout_gravity="center"
+                android:id="@+id/p_bar"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/no_poke"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="5dp"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/error_ic"
+                    android:src="@drawable/ic_action_name" />
+
+                <com.curve.nandhakishore.deltathree.customTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No such pokemon found"
+                    android:id="@+id/e_msg"
+                    android:textSize="35sp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_below="@id/error_ic"
+                    app:customFont="arcadepix_plus.ttf" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:id="@+id/card">
+
+                <ImageView
+                    android:layout_width="108dp"
+                    android:layout_height="108dp"
+                    android:id="@+id/sprite"
+                    android:src="@drawable/bulba"
+                    android:scaleX="1"
+                    android:scaleY="1"
+                    android:scaleType="fitXY" />
+
+                <com.curve.nandhakishore.deltathree.customTextView
+                    android:layout_width="wrap_content"
+                    android:layout_toEndOf="@+id/sprite"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    app:customFont="arcadepix_plus.ttf"
+                    android:id="@+id/name"
+                    android:textSize="55sp"
+                    android:text="Bulbasaur" />
+
+                <com.curve.nandhakishore.deltathree.customTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/types"
+                    android:layout_below="@+id/name"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/sprite"
+                    android:textSize="35sp"
+                    app:customFont="arcadepix_plus.ttf"
+                    android:text="Grass, Poison" />
+
+                <com.curve.nandhakishore.deltathree.customTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:customFont="arcadepix_plus.ttf"
+                    android:id="@+id/abilities"
+                    android:layout_marginStart="10dp"
+                    android:layout_below="@+id/types"
+                    android:layout_marginTop="4dp"
+                    android:textSize="19sp"
+                    android:layout_toEndOf="@+id/sprite"
+                    android:text="Abilities: Chlorophyll, Overgrow" />
+
+                <com.curve.nandhakishore.deltathree.customTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:customFont="arcadepix_plus.ttf"
+                    android:textSize="25sp"
+                    android:layout_marginTop="25dp"
+                    android:id="@+id/speed"
+                    android:layout_below="@+id/abilities"
+                    android:layout_alignParentStart="true"
+                    android:text="Speed: 45" />
+
+                <com.curve.nandhakishore.deltathree.customTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/experience"
+                    android:layout_below="@+id/abilities"
+                    android:layout_marginTop="25dp"
+                    android:textSize="25sp"
+                    android:layout_toEndOf="@+id/speed"
+                    android:layout_marginStart="35dp"
+                    app:customFont="arcadepix_plus.ttf"
+                    android:text="XP: 64" />
+
+                <com.curve.nandhakishore.deltathree.customTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hp"
+                    android:layout_toEndOf="@+id/experience"
+                    android:layout_marginTop="25dp"
+                    android:layout_below="@+id/abilities"
+                    android:layout_marginStart="35dp"
+                    android:textSize="25sp"
+                    app:customFont="arcadepix_plus.ttf"
+                    android:text="HP: 45" />
+
+                <com.curve.nandhakishore.deltathree.customTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/attack"
+                    android:textSize="25sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/speed"
+                    android:layout_alignParentStart="true"
+                    app:customFont="arcadepix_plus.ttf"
+                    android:text="Attack: 49" />
+
+                <com.curve.nandhakishore.deltathree.customTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/speed"
+                    android:layout_toEndOf="@id/attack"
+                    android:layout_marginStart="35dp"
+                    android:id="@+id/defense"
+                    android:textSize="25sp"
+                    app:customFont="arcadepix_plus.ttf"
+                    android:text="Defense: 49" />
+
+                <com.curve.nandhakishore.deltathree.customTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/weight"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/attack"
+                    android:textSize="25sp"
+                    app:customFont="arcadepix_plus.ttf"
+                    android:text="Weight: 69" />
+
+                <com.curve.nandhakishore.deltathree.customTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/height"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/attack"
+                    android:layout_toEndOf="@+id/weight"
+                    android:layout_marginStart="35dp"
+                    android:textSize="25sp"
+                    app:customFont="arcadepix_plus.ttf"
+                    android:text="Height: 7" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </FrameLayout>
+
+</LinearLayout>
