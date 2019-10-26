@@ -9,7 +9,7 @@ int main()
 	int CurrentMonth, CurrentYear;
 	int AgeYear, AgeMonth;
 	
-	cout<<"\n\n\t\t\tCount the age person\n\n";
+	cout<<"\n\n\t\t\tCount the age of the person\n\n";
 	cout<<"Enter Your Birth Year(Eg:1989):";
 	cin>>BirthYear;
 	
