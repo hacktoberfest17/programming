@@ -15,6 +15,14 @@ int gcd(int m, int n)
     }
 }
 
+int gcd_recursion(int m, int n)
+{
+    if(n != 0)
+        return gcd_recursion(n, m%n);
+    else
+        return m;
+}
+
 
 int main()
 {
@@ -28,6 +36,7 @@ int main()
     std::cin >> n;
     
     std::cout << "GCD of m and n: " << gcd(m, n) << '\n';
+    std::cout << "GCD recursion of m and n: " << gcd_recursion(m, n) << '\n';
 
     return 0;
 }
