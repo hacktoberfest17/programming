@@ -19,10 +19,14 @@ int main()
 {
 	clrscr();
 	int n;
-	printf("Enter a number : ");
+	printf("Enter number: ");
 	scanf("%d",&n);
 	if(n<=0)
-		printf("1\n");
+	{
+		printf("cannot be found");
+	}
 	else
-		printf("\nFactorial of the given number is :%d",fact_dp(n));
+	{
+		printf("\nFactorial of the number is :%d",fact_dp(n));
+	}
 }
