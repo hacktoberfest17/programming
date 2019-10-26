@@ -1,0 +1,1 @@
+This program lets you choose your own board size, and then displays options for custom boards or premade boards.
