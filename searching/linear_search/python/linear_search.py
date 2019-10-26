@@ -1,6 +1,8 @@
 #!/usr/bin/python
 """
 Script to perform linear search on an array
+
+When array is sorted use Binary Search else Linear Search is preferred
 """
 
 def linear_search(array,x):
