@@ -13,3 +13,18 @@ def is_palindrome_looping(string):
         else:
             return False
     return True
+
+
+def is_palindrome(input_chars):
+    
+    # convert the input to string
+    # so that integers can also be tested for palindrome.
+    
+    input_chars = str(input_chars)
+    
+    # reversing the input
+    reversed_chars = input_chars[::-1]
+    
+    return input_chars == reversed_chars
+    
+   
