@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(){
+int celsius,kelvin;
+int lower, upper, step;
+
+lower = 0;
+upper = 100;
+step = 5;
+
+celsius = lower;
+while(celsius <= upper){
+kelvin = celsius+273;
+printf("%d\t%d\n", celsius, kelvin);
+celsius = celsius+step;
+}
+}
+
