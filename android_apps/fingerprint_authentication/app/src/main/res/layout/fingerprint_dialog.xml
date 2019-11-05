@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/fingerprint_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/dialog_fingerprint_title"
+            android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+            android:textColor="?android:attr/textColorSecondary" />
+
+        <ImageView
+            android:id="@+id/fingerprint_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/fingerprint_description"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_fp_google" />
+
+        <TextView
+            android:id="@+id/fingerprint_status"
+            style="@android:style/TextAppearance.Material.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fingerprint_icon"
+            android:layout_alignTop="@+id/fingerprint_icon"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/fingerprint_icon"
+            android:gravity="center_vertical"
+            android:text="@string/dialog_fingerprint_content" />
+
+    </RelativeLayout>
+
+</layout>
