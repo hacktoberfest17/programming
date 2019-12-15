@@ -126,6 +126,7 @@ Programming contributors (sorted contributions)
 
 * **[amad](https://github.com/amad)**
 
+* **[mayankk245](https://github.com/mayankk245)**
 
 * **[AeonAxan](https://github.com/AeonAxan)**
 
