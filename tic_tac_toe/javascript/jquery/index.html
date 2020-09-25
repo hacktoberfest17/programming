@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic-Tac-Toe</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-4 offset-md-4">
+				<h2><strong><a href="https://github.com/mouri11/TicTacToe" target="_blank">Tic Tac Toe</a></strong></h2>
+				<div id="result"></div>
+				<div class="col-8 offset-md-2" id="grid">
+					<div class="row">
+						<div class="col row1 col1" id="1"></div>
+						<div class="col row1 col2" id="2"></div>
+						<div class="col row1 col3" id="3"></div>
+					</div>
+					<div class="row">
+						<div class="col row2 col1" id="4"></div>
+						<div class="col row2 col2" id="5"></div>
+						<div class="col row2 col3" id="6"></div>
+					</div>
+					<div class="row">
+						<div class="col row3 col1" id="7"></div>
+						<div class="col row3 col2" id="8"></div>
+						<div class="col row3 col3" id="9"></div>
+					</div>
+				</div>
+
+				<div class="col-8 offset-md-2" id="controls">
+					<div><p align="center" id="turn" style="font-size: 150%;font-family:'Cedarville Cursive',cursive;">Your Turn</p></div>
+					<div class="row" align="center">
+						<button class="btn btn-primary col"><span id="sign" title="Choose your symbol"><i id="x" class="fa fa-close"></i></span></button>
+						<button class="btn btn-primary col" id="reset"><i class="fa fa-refresh"></i></button>
+					</div>
+				</div>
+				<footer style="text-align: center;">made by <a href="https://mouri11.github.io" target="_blank">Rohit Das</a></footer>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

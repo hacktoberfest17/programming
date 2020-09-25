@@ -1,0 +1,72 @@
+body {
+	background-color: #fff; 
+	background-image: 
+		linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+		linear-gradient(#eee .1em, transparent .1em);
+	background-size: 100% 2.5em;
+}
+
+h2 {
+	text-align: center;
+	font-family: 'Cedarville Cursive', cursive;
+	font-size: 300%;
+	margin-top: 18%;
+}
+
+#grid {
+	margin-top: 8%;
+	margin-bottom: 1.5%;
+	text-align: center;
+}
+
+#grid .col {
+	position: relative;
+	width: 20%;
+	padding:15% 0;
+	border-color: black;
+	font-family: 'Fredericka the Great', cursive;
+	color: black;
+	font-style: bold;
+	font-size: 275%; 
+}
+
+.row1, .row2 {
+	border-bottom: solid 2px;
+}
+
+.col1, .col2 {
+	border-right: solid 2px;
+}
+
+#controls {
+	padding-top: 5%;
+}
+
+.btn {
+	font-size: 200%;
+	margin:0 5%;
+	width: 50%;
+	height: 50%;
+	background-color: transparent;
+	border-color: transparent;
+	color: black;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+	background-color: transparent !important;
+	border-color: transparent !important;
+	color: black;
+}
+
+i {
+	color: black;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	text-decoration: none;
+	color: black;
+}
