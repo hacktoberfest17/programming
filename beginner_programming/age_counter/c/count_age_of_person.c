@@ -21,6 +21,9 @@ int main()
 	
 	AgeYear=CurrentYear-BirthYear;
 	AgeMonth=CurrentMonth-BirthMonth;
+	if(AgeMonth <0){
+		AgeMonth = AgeMonth*(-1) ;
+	}
 	
 	printf("\n\n\t\tYour Age is %d Years And %d Months ",AgeYear,AgeMonth);
 	
