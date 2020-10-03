@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calc</title>
+  <style>
+    .calculator {
+      width: 20%;
+      background-color: darkgray;
+      margin: auto;
+      padding: 7px;
+    }
+
+    #result {
+      padding: 4px;
+      background-color: yellowgreen;
+      border: 1px solid green;
+      text-align: right;
+      font-size: 4vh;
+    }
+
+    .ac {
+      padding: 12px;
+      font-size: 3vh;
+
+      display: table-cell;
+      margin: 2px;
+    }
+
+    #del {
+      float: right;
+    }
+
+    p {
+      display: table-row;
+    }
+
+    .operation {
+      padding: 10px;
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="calculator">
+    <div id="result">0</div>
+
+    <div class="operation">
+      <button class="ac" onclick="ac()">AC</button>
+      <button class="ac" onclick="del()" id="del">DEL</button>
+      <div class="mainconsole">
+        <div class="digits">
+          <p><button class="ac" onclick="digit(1)">1</button>
+            <button class="ac" onclick="digit(2)">2</button>
+            <button class="ac" onclick="digit(3)" )>3</button>
+          </p>
+          <p> <button class="ac" onclick="digit(4)">4</button>
+            <button class="ac" onclick="digit(5)">5</button>
+            <button class="ac" onclick="digit(6)">6</button></p>
+          <p>
+            <button class="ac" onclick="digit(7)">7</button>
+            <button class="ac" onclick="digit(8)">8</button>
+            <button class="ac" onclick="digit(9)">9</button>
+
+          </p>
+          <button class="ac" onclick="digit(0)">0</button>
+        </div>
+        <p><button class="ac" id="add" onclick="opp(1)">+</button>
+          <button class="ac" id="sub" onclick="opp(2)">-</button>
+          <button class="ac" id="mul" onclick="opp(3)">*</button>
+
+          <button class="ac" id="divide" onclick="opp(4)">/</button>
+
+          <button class="ac" id="mod" onclick="opp(5)">%</button>
+          <button class="ac" id="equal" onclick="final()">=</button>
+        </p>
+        <p>
+          <button class="ac" id="sin" onclick="sci(1)">Sin</button>
+          <button class="ac" id="cos" onclick="sci(2)">Cos</button>
+          <button class="ac" id="tan" onclick="sci(3)">Tan</button>
+          <button class="ac" id="log" onclick="sci(4)">Log</button>
+        </p>
+      </div>
+    </div>
+
+    press (=) for result
+  </div>
+
+</body>
+<script>
+  var i;
+  var result = document.getElementById("result");
+  var num1 = 0,
+    num2 = 0,
+    opp_no, process, final;
+
+  function ac() {
+    num2 = 0;
+    num1 = 0;
+    result.innerHTML = num1;
+
+  }
+
+  function del() {
+    num1 = Math.floor(num1 / 10);
+    result.innerHTML = num1;
+  }
+
+  function digit(i) {
+    num1 = (num1 * 10) + i;
+    result.innerHTML = num1;
+
+  }
+
+  function opp(process) {
+    opp_no = process;
+    num2 = num1;
+    num1 = 0;
+    result.innerHTML = 0;
+    console.log(num1);
+    console.log(num2);
+  }
+
+  function sci(i) {
+    if (i == 1) {
+      num1 = Math.sin(num1);
+      result.innerHTML = num1;
+    }
+    if (i == 2) {
+      num1 = Math.cos(num1);
+      result.innerHTML = num1;
+    }
+    if (i == 3) {
+      num1 = Math.tan(num1);
+      result.innerHTML = num1;
+
+    }
+    if (i == 4) {
+      num1 = Math.log10(num1);
+      result.innerHTML = num1;
+    }
+  }
+
+  function final() {
+    console.log(num1);
+    console.log(num2);
+    if (opp_no == 1) {
+      num2 = num1 + num2;
+      result.innerHTML = num2;
+    }
+
+    if (opp_no == 2) {
+      num2 = num2 - num1;
+      result.innerHTML = num2;
+    }
+    if (opp_no == 3) {
+      num2 = num2 * num1;
+      result.innerHTML = num2;
+      num2 = 0;
+    }
+    if (opp_no == 4) {
+      num2 = num2 / num1;
+      result.innerHTML = num2;
+    }
+    if (opp_no == 5) {
+      num2 = num2 % num1;
+      result.innerHTML = num2;
+
+    }
+  }
+</script>
+
+</html>
