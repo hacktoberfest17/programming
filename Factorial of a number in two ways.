@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class factorial{  
+     int facto(int n){
+        if(n==1||n==0)
+        return 1;
+       else
+       return n*facto((n-1));
+    }
+void facto(int x,int i)
+  {
+   int f=1;
+   for(;i<=x;i++){
+    f=f*i;
+   }  
+   System.out.println("Factorial by non recursive method is "+f);
+   }
+}
+class FactDemo{
+    public static void main(String[] args){
+    factorial obj1=new factorial();
+    int n,i=1,res;
+    Scanner obj=new Scanner(System.in);
+    System.out.println("Enter a number");
+    n=obj.nextInt();
+    obj1.facto(n,i);
+    res=obj1.facto(n);
+   System.out.println("Factorial by recursive method is "+res);
+}
+}
