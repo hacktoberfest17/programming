@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class SqureRootWithoutSqrt {
+	public static double squreRoot(int number) {
+		
+		double temp;
+		double sr=number/2;
+		do {
+			temp=sr;
+			sr=(temp+(number/temp))/2;
+		 }
+		while((temp-sr)!=0);
+		return sr;
+	}
+
+	public static void main(String[] args) {
+		
+		System.out.println("enter any number: ");
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		sc.close();
+		System.out.println("sqrt root of  "+num+" is: "+squreRoot(num));
+		
+	}
+}
