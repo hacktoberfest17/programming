@@ -3,7 +3,7 @@
 function convertYardsToMeters(yards) {
   if (typeof yards != "number")
     throw new Error("Invalid Type");
-  return yards * 36 / 39.370113;
+  return yards / 1.094;
 }
 
 console.log(convertYardsToMeters(1));
