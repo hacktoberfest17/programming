@@ -4,7 +4,7 @@ import os
 #tkinter import - os are libraries that are called into play to all us to use subprocess, check_call and frames
 master = Tk()
 master.title("Jarvis Support Tool")
-master.geometry("300x100")
+master.geometry("400x150")
 #Popen allows for the use of Win Dos commands to run
 #cmd calls cmd.exe
 #/K tells cmd.exe to run the next commands
