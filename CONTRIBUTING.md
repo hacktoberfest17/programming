@@ -17,7 +17,7 @@ A month-long celebration from October 1st - 31st sponsored by [Digital Ocean](ht
 Here are 3 quick and painless ways to contribute to this project:
 
 * Add a program in any language. (A simple Hello World would be suffice.)
-To do so, first create a issue with the task you are doing. For Ex. Issue - creating bubble sort in C. Add the HacktoberFest label in the issue and assign the issue to yourself. Create a pull request in response to that issue and finally submit it for review.
+To do so, first create an issue with the task you are doing. For Ex. Issue - creating bubble sort in C. Add the HacktoberFest label in the issue and assign the issue to yourself. Create a pull request in response to that issue and finally submit it for review.
 
 * How to name your branch?
 	username_hello_world_in_c
