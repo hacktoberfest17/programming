@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+  </head>
+  <body>
+    <!-- <img src="Hacktoberfest.png" alt=""> -->
+    <script type="text/javascript">
+      //HacktoberFest 2020 contribution
+      let img;
+      let step = 35; //Grid Resolution
+
+      function preload() {
+        img = loadImage('Hacktoberfest.png');
+      }
+
+      function setup() {
+        createCanvas(window.innerWidth,window.innerHeight);
+        noStroke();
+        //stroke(255);
+
+        image(img, 0, 0);
+        loadPixels();
+        let iw = 150;
+        let ih = iw;
+
+        //background("#072540");
+        //#072540   dark blue
+        //#93c2db   simil DarkSeaGreen
+        //#9c4668   Dark red
+        //#ff8ae2   Neon Pink
+
+        let w = width/2.0;
+        let h = w;
+        let gridStep = floor(w/step);
+        let imgStep = floor(iw/step);
+
+        //showValue(step);
+
+        translate(width/2,height/2);
+
+        fill(0,0);
+        rect(-w/2,-h/2,w,h);
+
+        for(let i=-w/2; i<w/2; i+=gridStep) {
+          for(let j=-h/2; j<h/2; j+= gridStep) {
+              let px = map(i, -w/2, w/2, 0, iw);
+              let py = map(j, -h/2, h/2, 0, ih);
+              let c = get(px,py);
+              fill(c);
+              rect(i,j,gridStep,gridStep);
+          }
+        }
+      }
+
+      function showValue(value) {
+        push();
+        translate(0,0);
+        fill(255);
+        text(value, width/2-10,20);
+        pop();
+      }
+    </script>
+  </body>
+</html>
