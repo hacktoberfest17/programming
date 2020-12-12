@@ -1,0 +1,23 @@
+// { Driver Code Starts
+//Initial Template for C++
+
+#include <bits/stdc++.h>
+using namespace std;
+
+ // } Driver Code Ends
+
+
+//User function Template for C++
+
+class Solution {
+  public:
+    vector<int> changeBits(int N) {
+        // code here
+        vector<int> vec;
+        int y = floor(log(N)/log(2))+1;
+        int a = pow(2,y) - 1;
+        vec.push_back(abs(a-N));
+        vec.push_back(a);
+        return vec;
+    }
+};
