@@ -1,0 +1,7 @@
+class Solution{   
+public:
+    long long mulMod(long long a, long long b, long long c){
+        //complete the function here
+        return ( (a%c)*(b%c) )%c;
+    }
+};
