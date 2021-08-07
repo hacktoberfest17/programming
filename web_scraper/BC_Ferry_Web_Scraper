@@ -86,6 +86,5 @@ def findWait(sub_routes, arrive,depart):
             route_arrival += k + ' '
         print('Ferry only goes to ' + route_arrival)
 
-
 if __name__ == '__main__':
     scan()
