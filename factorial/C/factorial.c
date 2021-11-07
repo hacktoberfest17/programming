@@ -5,14 +5,8 @@ int result[1000] = {0};
 
 int fact_dp(int n)
 {
-    int i;
-    result[0] = 1;
-    for (i = 1; i <= n; ++i) 
-    {
-    	result[i] = i * result[i - 1];
-    }
-    
-    return result[n];
+  	if(n<=1)return 1;
+    return n*fact_dp(n-1);
 }
 
 int main()
