@@ -4,6 +4,7 @@
 using namespace std;
 vector<ll> gr[1010];
 
+// u source, v is destination, vis is visited array
 void bfs(ll u,ll V,bool vis[])
 {
     queue<ll> q;
