@@ -3,7 +3,7 @@
 #define MAX 1000
 #define THREE 3
 #define FIVE 5
-
+//CAl
 int main(){
 	int i;
 	int multiplesof3;
