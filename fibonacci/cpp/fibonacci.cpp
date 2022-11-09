@@ -1,10 +1,10 @@
-// MOD AUTHOR:  Taylor Hudson
-// GITHUB    :  https://github.com/allencompsci
-// DATE      :  October 20, 2017
+// MOD AUTHOR:  Aarushi Arya
+// GITHUB    :  https://github.com/aarushi15002
+// DATE      :  October 30, 2017
 // DESCRITION:  This C++ program implements the fibonacci operation in a space efficient, non-recursive manner and works beyond long long
 
 #include <iostream>
-#inlcude <string>
+#include <string>
 using namespace std;
 
 string add(string a, string b) { // ADDED 
