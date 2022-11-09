@@ -30,7 +30,7 @@ switch(op){
     case '%':
         printf("=%l\n", (long)num1%(long)num2);
         break;
-    default: printf("Invalid Operator\n");
+    default: printf("Invalid Operator\n"); //In case if none of the above cases are matched
 }
 
 }
