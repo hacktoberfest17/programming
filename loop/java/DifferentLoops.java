@@ -47,5 +47,6 @@ public class DifferentLoops {
             System.out.print(next + " ");
         }
         System.out.println();
+        System.out.println("Very cool loops");
     }
 }
