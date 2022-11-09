@@ -6,8 +6,6 @@ vector<ll> gr[1010];
 
 void bfs(ll u,ll V,bool vis[])
 {
-
-
     queue<ll> q;
     vis[u]=true;
     q.push(u);
@@ -22,15 +20,13 @@ void bfs(ll u,ll V,bool vis[])
                 q.push(gr[ver][i]);
         }
     }
-
-
 }
 void bfsMain(ll src,ll V)
 {
-       bool vis[V];
-    fill(vis,vis+V,false);
+    bool vis[V];
+    fill(vis,vis+V,false);          //initialise each element of visited array to false
     bfs(src,V,vis);
-    for(ll i=0;i<V;i++)
+    for(ll i=0;i<V;i++)             //this loop will traverse all the disconnected components of tree
         if(!vis[i])
             bfs(i,V,vis);
 }
@@ -44,7 +40,6 @@ int main()
         cin>>u>>v;
         gr[u].push_back(v);
         gr[v].push_back(u);
-
     }
     ll src;
     cin>>src;
@@ -52,6 +47,7 @@ int main()
     return 0;
 }
 /*
+Input
 8 9
 0 1
 0 2
