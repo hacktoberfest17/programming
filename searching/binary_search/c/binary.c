@@ -1,5 +1,8 @@
 #include<stdio.h>
 // Program 5: To search for the presence of a given number in the array by Binary Search. 
+//Worst Case complexity: O(logN)), where N is the size of the array.
+//Prerequisite: The array should be sorted.
+
 const int max=1000;
 int enter(int a[max],int n)
 {
@@ -16,11 +19,16 @@ int B_search( int a[max], int n, int d)
       while (l<=u && !f)
       {
         mid=(l+u)/2;
-        if(a[mid]>d)
+        if(a[mid] == d)
+        {
+            f++;
+            break;
+        }
+        if(a[mid]>d)//lower(left) half of the array.
           u=mid-1;
-        else if(a[mid]<d)
+        else if(a[mid]<d)//upper(right) half of the array.
           l=mid+1;
-        else f++;
+        //else f++;
        }
       if (f!=0)  
        { printf("\nFound at %d position", mid+1);
