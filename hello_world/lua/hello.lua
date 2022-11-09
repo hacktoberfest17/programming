@@ -1,0 +1,1 @@
+prompt> lua hello.lua
