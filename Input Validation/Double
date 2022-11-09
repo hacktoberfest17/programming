@@ -1,0 +1,11 @@
+    //Input Validation for Double's
+    public static double getDouble(Scanner sc) {
+        double num;
+
+        while (!sc.hasNextDouble()) {
+            System.out.println("Not a number, Try again");
+            sc.next();
+        }
+        num = sc.nextDouble();
+        return num;
+    }
