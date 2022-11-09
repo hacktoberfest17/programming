@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue: Hello world</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="root">
+    <img src="https://vuejs.org/images/logo.png" alt="Vue.js">
+    <h2>{{ hello }}</h2>
+    <a href="https://vuejs.org/v2/guide/">{{ learnMore }}</a>
+    <a href="https://vuejs.org/v2/api/">{{ api }}</a>
+</div>
+<script>
+  new Vue({
+    el: "#root",
+    data: {
+      hello: 'Vue.js: The Progressive JavaScript Framework',
+      learnMore: 'Learn More',
+      api: 'API',
+    }
+  });
+</script>
+</body>
+</html>
