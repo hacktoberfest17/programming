@@ -6,14 +6,14 @@
 
 int main(){
 	int i;
-	int multiplesof3;
-	int multiplesof5;
-	int sum;
+	int multiples_of_3;
+	int multiples_of_5;
+	
 
 	for(i = 1; i < 10; i++){
-		multiplesof3 = 3 * 3;
-		multiplesof5 = 5 * 5;
-		printf("3: %d \t 5: %d\n", multiplesof3, multiplesof5);
+		multiples_of_3 = 3 * i;
+		multiples_of_5 = 5 * i;
+		printf("3: %d \t 5: %d\n", multiples_of_3, multiples_of_5);
 	}
-
+ return 0;
 }
