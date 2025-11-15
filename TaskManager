@@ -1,0 +1,101 @@
+import sqlite3
+import os
+from datetime import datetime
+
+class Task:
+    def __init__(self, title, priority, deadline):
+        self.title = title
+        self.priority = priority
+        self.deadline = deadline
+
+class TaskManager:
+    def __init__(self, db="tasks.db"):
+        self.db = db
+        self.conn = sqlite3.connect(self.db)
+        self.cursor = self.conn.cursor()
+        self.cursor.execute("CREATE TABLE IF NOT EXISTS tasks (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, priority INTEGER, deadline TEXT)")
+        self.conn.commit()
+
+    def add_task(self, task):
+        self.cursor.execute("INSERT INTO tasks(title, priority, deadline) VALUES (?, ?, ?)", (task.title, task.priority, task.deadline))
+        self.conn.commit()
+
+    def view_tasks(self):
+        self.cursor.execute("SELECT * FROM tasks")
+        return self.cursor.fetchall()
+
+    def delete_task(self, task_id):
+        self.cursor.execute("DELETE FROM tasks WHERE id = ?", (task_id,))
+        self.conn.commit()
+
+    def search_task(self, query):
+        self.cursor.execute("SELECT * FROM tasks WHERE title LIKE ?", ('%' + query + '%',))
+        return self.cursor.fetchall()
+
+    def sort_by_priority(self):
+        self.cursor.execute("SELECT * FROM tasks ORDER BY priority ASC")
+        return self.cursor.fetchall()
+
+    def sort_by_deadline(self):
+        self.cursor.execute("SELECT * FROM tasks ORDER BY deadline ASC")
+        return self.cursor.fetchall()
+
+manager = TaskManager()
+
+def clear():
+    os.system("cls" if os.name == "nt" else "clear")
+
+def display(tasks):
+    for t in tasks:
+        print(f"ID: {t[0]} | Title: {t[1]} | Priority: {t[2]} | Deadline: {t[3]}")
+    print()
+
+while True:
+    print("1. Add Task")
+    print("2. View Tasks")
+    print("3. Delete Task")
+    print("4. Search Task")
+    print("5. Sort by Priority")
+    print("6. Sort by Deadline")
+    print("7. Exit")
+    choice = input("Enter choice: ")
+
+    if choice == "1":
+        title = input("Title: ")
+        priority = int(input("Priority (1-5): "))
+        deadline = input("Deadline (YYYY-MM-DD): ")
+        task = Task(title, priority, deadline)
+        manager.add_task(task)
+        clear()
+
+    elif choice == "2":
+        clear()
+        tasks = manager.view_tasks()
+        display(tasks)
+
+    elif choice == "3":
+        task_id = int(input("Enter task ID to delete: "))
+        manager.delete_task(task_id)
+        clear()
+
+    elif choice == "4":
+        query = input("Search text: ")
+        tasks = manager.search_task(query)
+        clear()
+        display(tasks)
+
+    elif choice == "5":
+        tasks = manager.sort_by_priority()
+        clear()
+        display(tasks)
+
+    elif choice == "6":
+        tasks = manager.sort_by_deadline()
+        clear()
+        display(tasks)
+
+    elif choice == "7":
+        break
+
+    else:
+        clear()
