@@ -1,0 +1,92 @@
+import java.math.*;
+import java.io.*;
+public class FastFibonacci
+{
+
+	
+	// BigInteger is a class defined in java.math that allows the use of arbitrarily
+	// large integers without having to worry about overflow. This class makes sense
+	// for Fibonacci numbers because these become HUGE very quickly.
+
+	// answers is an array that stores already computed answers, thus preventing
+	// multiple calls to fibonacci with the same argument. This is the key
+	// to speeding up Fibonacci. Fibonacci(n) is stored in slot n-1 in answers
+	private static BigInteger[] answers;
+
+	private static BigInteger one;
+	private static BigInteger zero;
+
+	private static BufferedReader stdin = new BufferedReader( new InputStreamReader( System.in ) );
+
+
+	// The "fast" Fibonacci computation function. This is also recursive, but
+	// it consults the table of answers *before* making the recursive call, thus
+	// saving a huge amount of time.
+	public static BigInteger fastFibonacci(int n)
+	{
+		// answers[0] is initialized to 1.
+		if((n == 1) || (n == 2))
+                        return answers[0];
+
+		// If answers[n-1] is non-zero, then the answer has already been
+		// computed, so just return the value in this slot; no need to
+		// make a recursive call.
+                if(answers[n-1].compareTo(zero) != 0)
+                        return answers[n-1];
+
+		// Otherwise, find fibonacci(n-1), either by 
+		// looking it up in answers[n-2] or computing it for the first time
+		if(answers[n-2].compareTo(zero) == 0)
+                	answers[n-2] = fastFibonacci(n-1);
+
+		// Find fibonacci(n-2), either by 
+		// looking it up in answers[n-3] or computing it for the first time
+		if(answers[n-3].compareTo(zero) == 0)
+                	answers[n-3] = fastFibonacci(n-2);
+
+                return answers[n-2].add(answers[n-3]);
+	}
+
+        public static void main(String[] args)
+        {
+
+                int n;
+		long time, newTime;
+		BigInteger answer;
+
+                // Prompt the user
+                System.out.println("Type a positive integer." );
+                try{
+
+                        // Read a line of text from the user.
+                        String input = stdin.readLine();
+                        n = Integer.parseInt( input );
+			
+			zero = new BigInteger("0");
+			one = new BigInteger("1");
+
+			answers = new BigInteger[n];
+			answers[0] = new BigInteger("1");
+			answers[1] = new BigInteger("1");
+			for(int i = 2; i < n; i++)
+				answers[i] = new BigInteger("0");
+
+                       	time = System.currentTimeMillis();
+                        answer = fastFibonacci(n);
+                        newTime = System.currentTimeMillis();
+
+                        System.out.println("The "+n+"th Fibonacci number is "+ answer);
+                        System.out.println("It took " + (newTime-time) + " milliseconds to compute it.");
+
+                }
+                catch(java.io.IOException e)
+                {
+                        System.out.println(e);
+                }
+
+		
+
+	} // end of main
+	
+} // end of class
+
